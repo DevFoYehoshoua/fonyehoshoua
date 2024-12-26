@@ -6,6 +6,14 @@ import { onMounted } from 'vue'
 
 const open = ref(false)
 
+onMounted(() => {
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1 // Pb d'affichage du logo sur firefox. Donc règle spéciale
+
+  if (isFirefox) {
+    document.body.classList.add('firefox')
+  }
+})
+
 function toggleMenu() {
   open.value = !open.value
 }
@@ -65,21 +73,17 @@ const scrollToSection = (sectionId) => {
 
       <div
         @click="scrollToSection('top-home')"
-        class="col-span-2 col-start-1 flex w-24 sm:w-32 md:w-36 xl:w-28 cursor-pointer items-center self-center xl:mb-16 xl:max-h-32"
+        class="col-span-2 col-start-1 flex w-24 sm:w-32 md:w-36 xl:w-28 firefox:xl:w-56 cursor-pointer items-center self-center xl:mb-16 xl:max-h-32"
       >
         <img
           alt="Vue logo"
-          class="logo 2xl:w-full place-self-start xl:ml-4"
+          class="logo xl:w-full xl:max-w-full xl:h-auto object-contain place-self-start xl:ml-4"
           src="@/assets/logo-nobg.png"
-          width="125"
-          height="125"
         />
         <img
           alt="fon'i yehoshoa text"
           src="@/assets/text-nobg-white.png"
           class="2xl:w-full xl:mb-10 xl:ml-4"
-          width="125"
-          height="125"
         />
       </div>
 

@@ -3,5 +3,25 @@
 @tailwind utilities;
 
 .text-white-aura {
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.8), 0 0 6px rgba(255, 255, 255, 0.6);
-  }
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.8),
+    0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html take full width/height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional: Ensure the body element uses full viewport height */
+body {
+  min-height: 100vh;
+}
