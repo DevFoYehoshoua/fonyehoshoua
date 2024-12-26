@@ -361,6 +361,7 @@
             Pour soutenir
           </h1>
         </div>
+
         <div
           class="m-auto py-2 px-4 sm:py-4 sm:px-8 my-6 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:py-24 2xl:px-56"
         >
@@ -375,7 +376,188 @@
                 d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
               />
             </svg>
-            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">Paypal</h3>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">
+              Soutenir une oeuvre spécifique
+            </h3>
+          </div>
+
+          <div
+            id="soutien-par-oeuvre"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 lg:gap-y-36 p-8 pt-0 mt-8 mb-0 my-24 items-center"
+          >
+            <!-- donSiegeMpy -->
+            <div
+              ref="donSiegeMpy"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-1"
+            >
+              <a
+                href="#"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/siege-mpy-img.jpg"
+                  alt="siege-mpy"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <span class="text-white text-lg font-semibold">Soutenir</span>
+                </div>
+              </a>
+            </div>
+
+            <div
+              ref="txtSiegeMpy"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-1"
+            >
+              <h2 class="font-bold text-lg text-center mb-4">SIÈGE MPY</h2>
+              <p class="font-normal mb-16 lg:mb-0">
+                <b>Location des locaux</b> du siège de l’association "Madagascar pour Yéhoshoua"
+                (MPY) à Antananarivo. <br />Ces locaux sont utilisés
+                <b>pour toutes activités de MPY</b>( épicerie solidaire, salle de formation,
+                bureaux, accueillir des missionnaires...).<br />
+                Nous nous sommes engagés ensemble pour faire avancer les oeuvres du Père.
+              </p>
+            </div>
+
+            <!-- donCentreHospitalier -->
+            <div
+              ref="donCentreHospitalier"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-2"
+            >
+              <a
+                href="#"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/hopital-img.jpg"
+                  alt="image du projet d'hopital"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <span class="text-white text-lg font-semibold">Soutenir</span>
+                </div>
+              </a>
+            </div>
+            <div
+              ref="txtCentreHospitalier"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-1 lg:row-start-2"
+            >
+              <h2 class="font-bold text-lg text-center mb-4">CENTRE HOSPITALIER PAIN QUOTIDIEN</h2>
+              <p class="font-normal mb-16 lg:mb-0">
+                <b>Nombreux sont ceux qui décèdent</b> à Madagascar faute de moyen pour se soigner.
+                <b>Le prix des médicaments et des soins médicaux sont trop chers</b> par rapport aux
+                salaire moyen et niveau de vie de beaucoup de Malagasy. <br /><br />En 2023, le
+                Seigneur Yéhoshoua a fait grâce. L' association Pain Quotidien en partenariat avec
+                MPY a commencé la construction du Centre Hospitalier Pain Quotidien à Antananarivo
+                Madagascar pour
+                <b>donner la possibilité aux Malagasy de se soigner gratuitement.</b> <br />Nous
+                soutenons cette oeuvre.
+              </p>
+            </div>
+            <!-- donCantineTulear -->
+            <div
+              ref="donCantineTulear"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-3"
+            >
+              <a
+                href="#"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/cantine-img.jpg"
+                  alt="image d'enfants malagasy"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <span class="text-white text-lg font-semibold">Soutenir</span>
+                </div>
+              </a>
+            </div>
+
+            <div
+              ref="txtCantineTulear"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-3"
+            >
+              <h2 class="font-bold text-lg text-center mb-4">CANTINE À TULEAR</h2>
+              <p class="font-normal mb-16 lg:mb-0">
+                Depuis de nombreuses années, <b>la famine</b> (« le kéré » en malagasy)
+                <b>frappe le sud ouest de Madagascar</b>, de Tuléar à Fort-Dauphin, Amboasary,
+                Ambovobe et d’autres districts. Elle est due à un manque de pluie. <br /><br />En
+                2021, une grave sécheresse a provoqué une crise alimentaire majeure. Environ 90% des
+                habitants vivent de l’agriculture et de l’élevage. En conséquences,
+                <b>plus d'un million de Malagasy souffrent de la faim.</b> Des milliers d’enfants
+                souffrent de malnutrition sévère. Les population font cuire des racines, s’en
+                remettent aux mangues ou aux cactus pour se nourrir. <br /><br />En résumé,
+                <b>la population manque de tout</b> (aliments, soins, vetements...) C’est la raison
+                pour laquelle nous voulons aider et
+                <b>témoigner de l’amour du Seigneur par des actes concrets.</b> <br />Une cantine a
+                été mise en place à Antalanabo pour distribuer de la nourriture aux enfants.
+              </p>
+            </div>
+
+            <!-- donPrisonniers -->
+            <div
+              ref="donPrisonniers"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-4"
+            >
+              <a
+                href="#"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/prisonniers-img.jpg"
+                  alt="siege-mpy"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <span class="text-white text-lg font-semibold">Soutenir</span>
+                </div>
+              </a>
+            </div>
+            <div
+              ref="txtPrisonniers"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-1 lg:row-start-4"
+            >
+              <h2 class="font-bold text-lg text-center mb-4">SOUTIEN AUX PRISONNIERS</h2>
+              <p class="font-normal">
+                Les détenus de l’île, souffrant le plus souvent de <b>malnutrition</b>, vivent
+                <b>oubliés de tous</b>, dans des conditions
+                <b>d’exiguïté, de surpopulation et de manque d’hygiène.</b><br />
+                <br /><b>Des denrées alimentaires contre la malnutrition :</b> Bien que quelques
+                prisonniers peuvent se permettre d’acheter de la nourriture et de cuisiner dans leur
+                cellule, la plupart d'entre eux font la queue, chaque après-midi, pour recevoir un
+                repas (le seul de la journée) qui se résume à des racines de manioc bouillies.
+                <br />Nous organisons des visites de la prison d’Antananrivo afin partager la parole
+                du Seigneur, subvenir aux besoins et proposer des formations pour une future
+                insertion professionnelle.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex mt-8 items-center justify-start flex-wrap">
+            <svg
+              class="max-w-4 xl:max-w-6 sm:max-w-5 mr-2 mt-1 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
+              />
+            </svg>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">Don spontané</h3>
           </div>
           <div class="mt-2 sm:mt-4 ml-4">
             <p>Compte : Fon'i Yehôshoa</p>
@@ -511,6 +693,14 @@ const actions = ref(null)
 const ezra = ref(null)
 const fsoutien = ref(null)
 const soutien = ref(null)
+const donSiegeMpy = ref(null)
+const donCentreHospitalier = ref(null)
+const donCantineTulear = ref(null)
+const donPrisonniers = ref(null)
+const txtSiegeMpy = ref(null)
+const txtCentreHospitalier = ref(null)
+const txtCantineTulear = ref(null)
+const txtPrisonniers = ref(null)
 const footer = ref(null)
 
 const handleIntersection = (entries, observer) => {
@@ -536,7 +726,17 @@ onMounted(() => {
   observer.observe(actions.value)
   observer.observe(ezra.value)
   observer.observe(fsoutien.value)
+
   observer.observe(soutien.value)
+  observer.observe(donSiegeMpy.value)
+  observer.observe(txtSiegeMpy.value)
+  observer.observe(donCentreHospitalier.value)
+  observer.observe(txtCentreHospitalier.value)
+  observer.observe(donCantineTulear.value)
+  observer.observe(txtCantineTulear.value)
+  observer.observe(donPrisonniers.value)
+  observer.observe(txtPrisonniers.value)
+
   observer.observe(footer.value)
 
   onBeforeUnmount(() => {
