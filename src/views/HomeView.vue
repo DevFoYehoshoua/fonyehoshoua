@@ -391,7 +391,7 @@
               class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-1"
             >
               <a
-                href="#"
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR"
                 class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
               >
                 <img
@@ -428,7 +428,7 @@
               class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-2"
             >
               <a
-                href="#"
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR"
                 class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
               >
                 <img
@@ -466,7 +466,7 @@
               class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-3"
             >
               <a
-                href="#"
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&amount=0&currency_code=EUR"
                 class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
               >
                 <img
@@ -510,7 +510,7 @@
               class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-4"
             >
               <a
-                href="#"
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+les+prisonniers&amount=0&currency_code=EUR"
                 class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
               >
                 <img
