@@ -36,7 +36,7 @@
           class="m-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
-            Qui sommes nous
+            Qui sommes nous ?
           </h1>
         </div>
         <div
@@ -451,7 +451,7 @@
               <h2 class="font-bold text-lg text-center mb-4">CENTRE HOSPITALIER PAIN QUOTIDIEN</h2>
               <p class="font-normal mb-16 lg:mb-0">
                 <b>Nombreux sont ceux qui décèdent</b> à Madagascar faute de moyen pour se soigner.
-                <b>Le prix des médicaments et des soins médicaux sont trop chers</b> par rapport aux
+                <b>Le prix des médicaments et des soins médicaux sont trop chers</b> par rapport au
                 salaire moyen et niveau de vie de beaucoup de Malagasy. <br /><br />En 2023, le
                 Seigneur Yéhoshoua a fait grâce. L' association Pain Quotidien en partenariat avec
                 MPY a commencé la construction du Centre Hospitalier Pain Quotidien à Antananarivo
@@ -493,11 +493,11 @@
                 <b>frappe le sud ouest de Madagascar</b>, de Tuléar à Fort-Dauphin, Amboasary,
                 Ambovobe et d’autres districts. Elle est due à un manque de pluie. <br /><br />En
                 2021, une grave sécheresse a provoqué une crise alimentaire majeure. Environ 90% des
-                habitants vivent de l’agriculture et de l’élevage. En conséquences,
+                habitants vivent de l’agriculture et de l’élevage. En conséquence,
                 <b>plus d'un million de Malagasy souffrent de la faim.</b> Des milliers d’enfants
-                souffrent de malnutrition sévère. Les population font cuire des racines, s’en
+                souffrent de malnutrition sévère. Les populations font cuire des racines, s’en
                 remettent aux mangues ou aux cactus pour se nourrir. <br /><br />En résumé,
-                <b>la population manque de tout</b> (aliments, soins, vetements...) C’est la raison
+                <b>la population manque de tout</b> (aliments, soins, vêtements...) C’est la raison
                 pour laquelle nous voulons aider et
                 <b>témoigner de l’amour du Seigneur par des actes concrets.</b> <br />Une cantine a
                 été mise en place à Antalanabo pour distribuer de la nourriture aux enfants.
@@ -539,8 +539,8 @@
                 prisonniers peuvent se permettre d’acheter de la nourriture et de cuisiner dans leur
                 cellule, la plupart d'entre eux font la queue, chaque après-midi, pour recevoir un
                 repas (le seul de la journée) qui se résume à des racines de manioc bouillies.
-                <br />Nous organisons des visites de la prison d’Antananrivo afin partager la parole
-                du Seigneur, subvenir aux besoins et proposer des formations pour une future
+                <br />Nous organisons des visites de la prison d’Antananrivo afin de partager la
+                parole du Seigneur, subvenir aux besoins et proposer des formations pour une future
                 insertion professionnelle.
               </p>
             </div>
