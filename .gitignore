@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-dist
 dist-ssr
 coverage
 *.local
@@ -33,7 +32,7 @@ coverage
 /node_modules/
 
 # Build output
-/dist/
+
 /build/
 
 # Environment files
