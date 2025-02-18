@@ -66,7 +66,7 @@
                 src="/src/assets/photos/bnr-logo.jpg"
               />
             </a>
-            <a href="https://objectifciel.org/">
+            <a href="https://objectifciel.fr/">
               <img
                 class="w-full h-auto object-contain aspect-square"
                 alt="Logo objectif ciel"
