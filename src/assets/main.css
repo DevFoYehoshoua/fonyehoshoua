@@ -25,3 +25,58 @@ body {
 body {
   min-height: 100vh;
 }
+
+/* Définition des couleurs dynamiques selon la langue */
+/* Version française (orange et vert foncé) */
+html.fr {
+  --primary-color: #ff6600; /* Orange */
+  --secondary-color: #006633; /* Vert foncé */
+  --text-color: white;
+  --hover-color: #ffcc99; /* Orange clair */
+}
+
+/* Version malgache (vert et couleur complémentaire) */
+html.mg {
+  --primary-color: #008000; /* Vert */
+  --secondary-color: #f4a261; /* Orange clair */
+  --text-color: white;
+  --hover-color: #a3d9a5; /* Vert clair */
+}
+
+/* Application des couleurs aux éléments */
+header {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.text-foni-white {
+  color: var(--text-color);
+}
+
+.text-foni-green {
+  color: var(--primary-color);
+}
+
+.text-foni-green:hover {
+  color: var(--hover-color);
+}
+
+/* Sélecteur de langue */
+select {
+  appearance: none;
+  background-image: url('path/to/dropdown-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+option {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+option img {
+  margin-right: 8px;
+  width: 18px;
+  height: 12px;
+}
