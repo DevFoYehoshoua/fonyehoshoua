@@ -5,7 +5,7 @@
         locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-[#006747] to-[#74C69D]'
       ]">
       <!-- Logo -->
-      <div class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
+      <a href="#top-home" class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
         <img
           alt="Vue logo"
           class="w-12 sm:w-20 md:w-24 xl:w-32 h-auto object-contain"
@@ -16,7 +16,7 @@
           src="@/assets/text-nobg-white.png"
           class="w-16 sm:w-24 md:w-28 xl:w-36 object-contain"
         />
-      </div>
+      </a>
 
       <!-- Sélecteur de langue avec images -->
       <div class="absolute right-8 sm:right-12 flex items-center space-x-2 mr-12">
