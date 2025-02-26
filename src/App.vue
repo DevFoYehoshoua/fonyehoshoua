@@ -1,17 +1,99 @@
+<template>
+  <div class="h-full w-full lang-[locale]">
+      <header :class="[ 
+        'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
+        locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-[#006747] to-[#74C69D]'
+      ]">
+      <!-- Logo -->
+      <div class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
+        <img
+          alt="Vue logo"
+          class="w-12 sm:w-20 md:w-24 xl:w-32 h-auto object-contain"
+          src="@/assets/logo-nobg.png"
+        />
+        <img
+          alt="fon'i yehoshoa text"
+          src="@/assets/text-nobg-white.png"
+          class="w-16 sm:w-24 md:w-28 xl:w-36 object-contain"
+        />
+      </div>
+
+      <!-- Sélecteur de langue avec images -->
+      <div class="absolute right-8 sm:right-12 flex items-center space-x-2 mr-12">
+        <img 
+          src="@/assets/fr-flag.png" 
+          alt="Français" 
+          class="w-8 h-8 cursor-pointer" 
+          @click="changeLanguage('fr')"
+        />
+        <img 
+          src="@/assets/mg-flag.png" 
+          alt="Malagasy" 
+          class="w-8 h-8 cursor-pointer" 
+          @click="changeLanguage('mg')"
+        />
+      </div>
+
+      <!-- Menu -->
+      <div id="full-menu" class="hidden xl:flex xl:justify-center xl:items-center xl:gap-8 col-span-5">
+        <a @click="scrollToSection('qui')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('whoAreWe') }}
+        </a>
+        <a @click="scrollToSection('objectifs')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('objectives') }}
+        </a>
+        <a @click="scrollToSection('actions')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('actions') }}
+        </a>
+        <a @click="scrollToSection('fsoutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('supportForms') }}
+        </a>
+        <a @click="scrollToSection('soutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('support') }}
+        </a>
+        <a @click="scrollToSection('contact')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('contactUs') }}
+        </a>
+      </div>
+
+      <!-- Menu burger pour mobile -->
+      <span @click="toggleMenu" class="absolute xl:hidden right-8 cursor-pointer text-2xl">
+        <i class="text-white" :class="[open ? 'fa fa-chevron-down' : 'fa fa-bars']"></i>
+      </span>
+
+      <ul class="justify-center xl:pb-0 xl:px-0 px-8 pb-8 xl:static absolute w-full xl:hidden bg-gradient-to-r from-orange-950 to-foni-bg2 top-24 md:top-32 duration-700 ease-in" 
+          :class="[open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0']">
+        <li class="my-6" v-for="(key, section) in { qui: 'whoAreWe', objectifs: 'objectives', actions: 'actions', fsoutien: 'supportForms', soutien: 'support', contact: 'contactUs'}" :key="section">
+          <a @click="scrollToSection(section)" class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer">
+            {{ $t(key) }}
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <RouterView />
+  </div>
+</template>
+
+
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HomeView from './views/HomeView.vue'
-import { ref } from 'vue'
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const open = ref(false)
+const { locale } = useI18n()
 
 onMounted(() => {
-  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1 // Pb d'affichage du logo sur firefox. Donc règle spéciale
-
+  // Vérifie si c'est Firefox et ajoute une classe au body
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
   if (isFirefox) {
     document.body.classList.add('firefox')
   }
+
+  // Récupère la langue sauvegardée ou utilise 'fr' par défaut
+  const savedLang = localStorage.getItem('language') || 'fr'
+  locale.value = savedLang
+  document.documentElement.className = savedLang
 })
 
 function toggleMenu() {
@@ -25,125 +107,14 @@ const scrollToSection = (sectionId) => {
   }
   if (sectionId !== 'top-home') {
     toggleMenu()
-  } else if (sectionId === 'top-home' && open.value == true) {
+  } else if (sectionId === 'top-home' && open.value) {
     toggleMenu()
   }
 }
+
+const changeLanguage = (lang) => {
+  locale.value = lang
+  document.documentElement.className = lang // Change la classe HTML pour adapter le CSS
+  localStorage.setItem('language', lang) // Sauvegarde la langue choisie
+}
 </script>
-
-<template>
-  <div class="h-full w-full">
-    <header
-      class="bg-gradient-to-r from-orange-950 to-foni-bg2 xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 xl:h-32 xl:max-h-28"
-    >
-      <div
-        id="full-menu"
-        class="hidden xl:grid xl:grid-cols-5 col-span-5 xl:row-span-3 col-start-3 gap-4 justify-items-center items-center justify-center text-center xl:mb-28"
-      >
-        <a
-          @click="scrollToSection('qui')"
-          class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer"
-          >Qui sommes nous?</a
-        >
-
-        <a
-          @click="scrollToSection('objectifs')"
-          class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer"
-          >Nos objectifs</a
-        >
-
-        <a
-          @click="scrollToSection('actions')"
-          class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer"
-          >Nos actions dans le monde</a
-        >
-
-        <a
-          @click="scrollToSection('fsoutien')"
-          class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer"
-          >Formes de soutien</a
-        >
-
-        <a
-          @click="scrollToSection('soutien')"
-          class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer"
-          >Soutenir</a
-        >
-      </div>
-
-      <div
-        @click="scrollToSection('top-home')"
-        class="col-span-2 col-start-1 flex w-24 sm:w-32 md:w-36 xl:w-28 firefox:xl:w-56 cursor-pointer items-center self-center xl:mb-16 xl:max-h-32"
-      >
-        <img
-          alt="Vue logo"
-          class="logo xl:w-full xl:max-w-full xl:h-auto object-contain place-self-start xl:ml-4"
-          src="@/assets/logo-nobg.png"
-        />
-        <img
-          alt="fon'i yehoshoa text"
-          src="@/assets/text-nobg-white.png"
-          class="2xl:w-full xl:mb-10 xl:ml-4"
-        />
-      </div>
-
-      <span
-        @click="toggleMenu"
-        class="absolute xl:hidden right-8 top-7 sm:top-10 sm:right-12 cursor-pointer text-2xl sm:text-4xl"
-      >
-        <i class="text-white" :class="[open ? 'fa fa-chevron-down' : 'fa fa-bars']"></i>
-      </span>
-
-      <ul
-        class="justify-center xl:pb-0 xl:px-0 px-8 pb-8 xl:static absolute w-full xl:hidden bg-gradient-to-r from-orange-950 to-foni-bg2 top-24 md:top-32 duration-700 ease-in"
-        :class="[open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0']"
-      >
-        <li class="my-6">
-          <!-- <RouterLink to="/" class="text-xl text-foni-white font-bold hover:text-foni-green">Home</RouterLink> -->
-          <a
-            @click="scrollToSection('qui')"
-            class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
-            >Qui sommes nous?</a
-          >
-        </li>
-        <li class="my-6">
-          <a
-            @click="scrollToSection('objectifs')"
-            class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
-            >Nos objectifs</a
-          >
-        </li>
-        <li class="my-6">
-          <a
-            @click="scrollToSection('actions')"
-            class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
-            >Nos actions dans le monde</a
-          >
-        </li>
-        <li class="my-6">
-          <a
-            @click="scrollToSection('fsoutien')"
-            class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
-            >Formes de soutien</a
-          >
-        </li>
-        <li class="my-6">
-          <a
-            @click="scrollToSection('soutien')"
-            class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
-            >Soutenir</a
-          >
-        </li>
-        <!-- <li class="md:mx-4"> 
-        <RouterLink to="/about" class="text-xl text-foni-white font-bold hover:text-foni-green">About</RouterLink>
-      </li> -->
-      </ul>
-
-      <!-- <div class="col-span-3 justify-self-end mr-4">
-      <i class="fa fa-bars w3-xlarge text-white"></i>
-    </div> -->
-    </header>
-
-    <RouterView />
-  </div>
-</template>
