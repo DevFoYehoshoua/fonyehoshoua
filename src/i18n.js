@@ -73,7 +73,13 @@ const messages = {
     "virementBancaire": "Virement bancaire",
     "cheque": "Chèque",
     "ordreAssociation": "à l'ordre de l'association Fon'i Yehoshoa",
-    "noteMotifDon": "N.B: N'oubliez pas de préciser le motif de votre don (ex : mission, prisonniers...)"
+    "noteMotifDon": "N.B: N'oubliez pas de préciser le motif de votre don (ex : mission, prisonniers...)",
+    "contactUs":"Nous contacter",
+    "contact_association" : "Contact de l'Association",
+    "contact_nom":"Nom",
+    "contact_email":"Email",
+    "contact_tel":"Téléphone",
+    "contact_message":"Message"
   },
   "mg": {
     "objectifs": {
@@ -147,7 +153,13 @@ const messages = {
     "virementBancaire": "Fandefasana vola amin'ny banky",
     "cheque": "Taratasim-bola",
     "ordreAssociation": "Ho an'ny fikambanana Fon'i Yehoshoa",
-    "noteMotifDon": "Fanamarihana: Aza adino ny manamarika ny anton'ny tolotra ataonareo (ohatra : iraka, voafonja, foibe MPY,...)"
+    "noteMotifDon": "Fanamarihana: Aza adino ny manamarika ny anton'ny tolotra ataonareo (ohatra : iraka, voafonja, foibe MPY,...)",
+    "contactUs":"Fifandraisana",
+    "contact_association" : "Fifandraisana @ fikambanana",
+    "contact_nom":"Anarana",
+    "contact_email":"Mailaka",
+    "contact_tel":"Antso",
+    "contact_message":"Hafatra fohy"
   }
 }
 

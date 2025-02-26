@@ -1,48 +1,22 @@
 <template>
   <div class="h-full w-full lang-[locale]">
-    <!-- <header class="bg-gradient-to-r from-orange-950 to-foni-bg2 xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center"> -->
-      <!-- <header :class="[
-        'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
-        locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-foni-green to-green-light'
-      ]"> -->
-      <!-- <header :class="[ 
-        'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
-        locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-foni-green to-green-light'
-      ]"> -->
-      <!-- <header :class="[ 
-        'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
-        locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-[#006747] to-[#74C69D]'
-      ]"> -->
       <header :class="[ 
         'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
         locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-[#006747] to-[#74C69D]'
       ]">
       <!-- Logo -->
-      <!-- <div class="col-span-2 col-start-1 flex w-32 sm:w-40 md:w-48 xl:w-56 cursor-pointer items-center self-center">
+      <div class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
         <img
           alt="Vue logo"
-          class="logo w-full h-auto object-contain"
+          class="w-12 sm:w-20 md:w-24 xl:w-32 h-auto object-contain"
           src="@/assets/logo-nobg.png"
         />
         <img
           alt="fon'i yehoshoa text"
           src="@/assets/text-nobg-white.png"
-          class="w-full xl:ml-4"
+          class="w-16 sm:w-24 md:w-28 xl:w-36 object-contain"
         />
-      </div> -->
-
-      <div class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
-  <img
-    alt="Vue logo"
-    class="w-12 sm:w-20 md:w-24 xl:w-32 h-auto object-contain"
-    src="@/assets/logo-nobg.png"
-  />
-  <img
-    alt="fon'i yehoshoa text"
-    src="@/assets/text-nobg-white.png"
-    class="w-16 sm:w-24 md:w-28 xl:w-36 object-contain"
-  />
-</div>
+      </div>
 
       <!-- Sélecteur de langue avec images -->
       <div class="absolute right-8 sm:right-12 flex items-center space-x-2 mr-12">
@@ -62,11 +36,24 @@
 
       <!-- Menu -->
       <div id="full-menu" class="hidden xl:flex xl:justify-center xl:items-center xl:gap-8 col-span-5">
-        <a @click="scrollToSection('qui')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">{{ $t('whoAreWe') }}</a>
-        <a @click="scrollToSection('objectifs')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">{{ $t('objectives') }}</a>
-        <a @click="scrollToSection('actions')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">{{ $t('actions') }}</a>
-        <a @click="scrollToSection('fsoutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">{{ $t('supportForms') }}</a>
-        <a @click="scrollToSection('soutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">{{ $t('support') }}</a>
+        <a @click="scrollToSection('qui')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('whoAreWe') }}
+        </a>
+        <a @click="scrollToSection('objectifs')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('objectives') }}
+        </a>
+        <a @click="scrollToSection('actions')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('actions') }}
+        </a>
+        <a @click="scrollToSection('fsoutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('supportForms') }}
+        </a>
+        <a @click="scrollToSection('soutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('support') }}
+        </a>
+        <a @click="scrollToSection('contact')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+          {{ $t('contactUs') }}
+        </a>
       </div>
 
       <!-- Menu burger pour mobile -->
@@ -76,10 +63,7 @@
 
       <ul class="justify-center xl:pb-0 xl:px-0 px-8 pb-8 xl:static absolute w-full xl:hidden bg-gradient-to-r from-orange-950 to-foni-bg2 top-24 md:top-32 duration-700 ease-in" 
           :class="[open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0']">
-        <!-- <li class="my-6" v-for="section in ['qui', 'objectifs', 'actions', 'fsoutien', 'soutien']" :key="section">
-          <a @click="scrollToSection(section)" class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer">{{ $t(section) }}</a>
-        </li> -->
-        <li class="my-6" v-for="(key, section) in { qui: 'whoAreWe', objectifs: 'objectives', actions: 'actions', fsoutien: 'supportForms', soutien: 'support' }" :key="section">
+        <li class="my-6" v-for="(key, section) in { qui: 'whoAreWe', objectifs: 'objectives', actions: 'actions', fsoutien: 'supportForms', soutien: 'support', contact: 'contactUs'}" :key="section">
           <a @click="scrollToSection(section)" class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer">
             {{ $t(key) }}
           </a>
