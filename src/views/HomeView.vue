@@ -43,8 +43,16 @@
         ref="qui"
         class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-[1500ms]"
       >
-        <div
+        <!-- <div
           class="m-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center"
+        > -->
+        <div
+          :class="[
+            'm-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+            locale === 'fr' 
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+              : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+          ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
             {{ $t('whoWeAreTitle') }}
@@ -97,9 +105,15 @@
         ref="objectifs"
         class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
       >
-        <div
-          class="bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-6 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center"
-        >
+
+      <div
+        :class="[
+          'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-6 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+          locale === 'fr' 
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+        ]"
+      >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
             {{ $t("objectifs.title") }}
           </h1>
@@ -121,9 +135,15 @@
       ref="actions"
       class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
     >
-      <div
-        class="bg-cover bg-center bg-no-repeat bg-photo-4 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center"
+    <div
+        :class="[
+          'bg-cover bg-center bg-no-repeat bg-photo-4 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+          locale === 'fr' 
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+        ]"
       >
+
         <h1
           class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans text-center"
         >
@@ -205,22 +225,28 @@
     </section>
 
     <section
-      ref="ezra"
-      id="ezra"
-      class="bg-gradient-to-br from-orange-800 to-orange-900 scroll-mb-6 opacity-0 transform translate-y-10 transition-all duration-700"
-    >
-
-      <div
-        class="bg-black/80 text-amber-50 h-56 sm:h-72 px-6 py-12 sm:px-12 sm:py-24 text-white-aura text-center tracking-widest sm:text-lg md:text-4xl md:h-96 2xl:text-4xl 2xl:py-72 2xl:pb-96"
-      >
-        <h3 class="underline mb-4 font-extrabold text-xl sm:text-2xl md:text-4xl 2xl:text-5xl 2xl:mb-8">
-          {{ $t("ezra.title") }}
-        </h3>
-        <p class="font-medium pb-24">
-          {{ $t("ezra.verse") }}
-        </p>
-      </div>
-    </section>
+  ref="ezra"
+  id="ezra"
+  :class="[  
+    'w-full h-[50vh]',  // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
+    locale === 'fr' 
+      ? 'bg-gradient-to-br from-orange-800 to-orange-900'  
+      : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
+  ]"
+>
+  <div
+    class="bg-black/80 text-amber-50 h-full flex items-center justify-center px-6 py-12 sm:px-12 sm:py-24 text-white-aura text-center tracking-widest sm:text-lg md:text-4xl md:h-96 2xl:text-4xl 2xl:py-72 2xl:pb-96"
+  >
+    <div>
+      <h3 class="underline mb-4 font-extrabold text-xl sm:text-2xl md:text-4xl 2xl:text-5xl 2xl:mb-8">
+        {{ $t("ezra.title") }}
+      </h3>
+      <p class="font-medium pb-24">
+        {{ $t("ezra.verse") }}
+      </p>
+    </div>
+  </div>
+</section>
 
     <div
       :class="[
@@ -230,6 +256,7 @@
           : 'bg-gradient-to-b from-[#006f73] to-[#00a6b6]'
       ]"
     >
+    
       <img
         src="/src/assets/photos/img9.jpg"
         class="w-full h-auto object-contain max-w-screen-md mx-auto"
@@ -242,9 +269,16 @@
       ref="fsoutien"
       class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
     >
-        <div
-          class="bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-1 h-64 sm:h-72 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center 2xl:h-80"
-        >
+
+    <div
+        :class="[  
+          'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-1 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+          locale === 'fr'  
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'  
+            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'  
+        ]"
+      >
+
           <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
             {{ $t("supports.title") }}
           </h1>
@@ -325,9 +359,16 @@
             ref="soutien"
             class="w-full mb-4 scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
           >
+
             <div
-              class="bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80"
+              :class="[
+                'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
+                locale === 'fr' 
+                  ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+                  : 'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
+              ]"
             >
+
               <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
                 {{ $t("soutien.title") }}
               </h1>
@@ -565,8 +606,14 @@
       </section>
 
       <div id="contact"
-        class="bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80"
+        :class="[
+          'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
+          locale === 'fr' 
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+            : 'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
+        ]"
       >
+
         <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
           {{ $t("contactUs") }}
         </h1>
@@ -608,13 +655,22 @@
       <section
         ref="footer"
         id="footer"
-        class="bg-gradient-to-b from-orange-950 to-black text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 opacity-0 transform translate-y-10 transition-all duration-700"
+        :class="[
+          'bg-gradient-to-b from-orange-950 to-black text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 transition-all duration-700',
+          locale === 'fr' 
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
+            : 'bg-gradient-to-br from-[#00251E] to-[#008F5A] bg-[#004D32] brightness-110'
+        ]"
       >
+
+
         <p class="mx-auto px-2 italic pt-6 sm:pt-12 xl:text-2xl">
           Association caritative chrétienne
         </p>
 
         <div class="flex mt-4 items-center justify-center flex-wrap">
+          
+          
     <!-- Icône téléphone + numéro -->
     <svg
       class="max-w-4 xl:max-w-8 mr-2 self-center"

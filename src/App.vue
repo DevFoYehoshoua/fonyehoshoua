@@ -1,9 +1,11 @@
 <template>
   <div class="h-full w-full lang-[locale]">
-      <header :class="[ 
-        'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
-        locale === 'fr' ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' : 'bg-gradient-to-r from-[#006747] to-[#74C69D]'
-      ]">
+    <header :class="[ 
+      'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex items-center',
+      locale === 'fr' 
+        ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' 
+        : 'bg-gradient-to-r from-[#00251E] to-[#007A4D] brightness-110 bg-opacity-90'
+    ]">
       <!-- Logo -->
       <a href="#top-home" class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2">
         <img
@@ -36,33 +38,73 @@
 
       <!-- Menu -->
       <div id="full-menu" class="hidden xl:flex xl:justify-center xl:items-center xl:gap-8 col-span-5">
-        <a @click="scrollToSection('qui')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('qui')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert (ici, rouge tomate)
+            : 'hover:text-foni-green'">
           {{ $t('whoAreWe') }}
         </a>
-        <a @click="scrollToSection('objectifs')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('objectifs')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert
+            : 'hover:text-foni-green'">
           {{ $t('objectives') }}
         </a>
-        <a @click="scrollToSection('actions')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('actions')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert
+            : 'hover:text-foni-green'">
           {{ $t('actions') }}
         </a>
-        <a @click="scrollToSection('fsoutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('fsoutien')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert
+            : 'hover:text-foni-green'">
           {{ $t('supportForms') }}
         </a>
-        <a @click="scrollToSection('soutien')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('soutien')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert
+            : 'hover:text-foni-green'">
           {{ $t('support') }}
         </a>
-        <a @click="scrollToSection('contact')" class="text-lg text-foni-white font-bold hover:text-foni-green cursor-pointer self-center">
+        <a 
+          @click="scrollToSection('contact')" 
+          class="text-lg text-foni-white font-bold cursor-pointer self-center"
+          :class="locale === 'mg' 
+            ? 'hover:text-[#FF6347]'  // Couleur complémentaire au vert
+            : 'hover:text-foni-green'">
           {{ $t('contactUs') }}
         </a>
       </div>
+
+
+
 
       <!-- Menu burger pour mobile -->
       <span @click="toggleMenu" class="absolute xl:hidden right-8 cursor-pointer text-2xl">
         <i class="text-white" :class="[open ? 'fa fa-chevron-down' : 'fa fa-bars']"></i>
       </span>
 
-      <ul class="justify-center xl:pb-0 xl:px-0 px-8 pb-8 xl:static absolute w-full xl:hidden bg-gradient-to-r from-orange-950 to-foni-bg2 top-24 md:top-32 duration-700 ease-in" 
-          :class="[open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0']">
+      <ul
+        class="justify-center xl:pb-0 xl:px-0 px-8 pb-8 xl:static absolute w-full xl:hidden top-24 md:top-32 duration-700 ease-in"
+        :class="[
+          open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0',
+          locale === 'fr' 
+            ? 'bg-gradient-to-r from-orange-950 to-foni-bg2'  // Couleur du fond pour la langue française
+            : 'bg-gradient-to-r from-[#006f73] to-[#00a6b6]'   // Couleur du fond pour la langue malgache
+        ]"
+      >
         <li class="my-6" v-for="(key, section) in { qui: 'whoAreWe', objectifs: 'objectives', actions: 'actions', fsoutien: 'supportForms', soutien: 'support', contact: 'contactUs'}" :key="section">
           <a @click="scrollToSection(section)" class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer">
             {{ $t(key) }}
