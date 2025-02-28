@@ -690,11 +690,13 @@
           action="https://formspree.io/f/meoebwov"
           method="POST"
           class="flex flex-col space-y-6"
+          @submit="clearForm"
         >
           <label class="font-medium text-gray-700"> {{ $t('contact_nom') }} :</label>
           <input
             type="text"
             name="name"
+            v-model="formData.name"
             required
             class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
@@ -703,6 +705,7 @@
           <input
             type="email"
             name="email"
+            v-model="formData.email"
             required
             class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
@@ -712,6 +715,7 @@
           <input
             type="tel"
             name="phone"
+            v-model="formData.phone"
             required
             class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
@@ -719,6 +723,7 @@
           <label class="font-medium text-gray-700"> {{ $t('contact_message') }} :</label>
           <textarea
             name="message"
+            v-model="formData.message"
             required
             class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           ></textarea>
@@ -849,6 +854,16 @@ const footer = ref(null)
 
 // Gestion de l'internationalisation
 const { locale, t } = useI18n()
+
+// Data pour le formulaire
+const formData = ref({ name: '', email: '', phone: '', message: '' })
+
+// Fonction clear
+const clearForm = () => {
+  setTimeout(() => {
+    formData.value = { name: '', email: '', phone: '', message: '' }
+  }, 1000) // Petit délai pour s'assurer du submit avant le clear
+}
 
 const changeLanguage = (lang) => {
   locale.value = lang
