@@ -183,14 +183,14 @@ const messages = {
     noteMotifDon:
       "Fanamarihana: Aza adino ny manamarika ny anton'ny tolotra ataonareo (ohatra : iraka, voafonja, foibe MPY,...)",
     contactUs: 'Fifandraisana',
-    contact_association: 'Fifandraisana @ fikambanana',
+    contact_association: "Fifandraisana {'@'} fikambanana",
     contact_nom: 'Anarana',
     contact_email: 'Mailaka',
     contact_tel: 'Antso',
     contact_message: 'Hafatra fohy'
   }
 }
-
+console.log('DEBUG: i18n messages loaded', messages) // DEBUGGING
 // const i18n = createI18n({
 //   legacy: false, // Utilisation du mode Composition API
 //   locale: 'fr', // Langue par défaut
