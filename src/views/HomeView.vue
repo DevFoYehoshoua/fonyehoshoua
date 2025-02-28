@@ -412,7 +412,7 @@
       >
         <div
           :class="[
-            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
+            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay w-full flex justify-center items-center 2xl:h-80',
             locale === 'fr'
               ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
               : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
@@ -662,7 +662,7 @@
       <div
         id="contact"
         :class="[
-          'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
+          'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay w-full flex justify-center items-center 2xl:h-80',
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
             : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
@@ -741,7 +741,7 @@
         ref="footer"
         id="footer"
         :class="[
-          'bg-gradient-to-b from-orange-950 to-black text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 transition-all duration-700',
+          ' text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 transition-all duration-700',
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
             : //'bg-gradient-to-br from-[#00251E] to-[#008F5A] bg-[#004D32] brightness-110'
