@@ -5,7 +5,8 @@
         'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex',
         locale === 'fr'
           ? 'bg-gradient-to-r from-orange-950 to-foni-bg2'
-          : 'bg-gradient-to-r from-[#00251E] to-[#007A4D] brightness-110 bg-opacity-90'
+          : //: 'bg-gradient-to-r from-[#00251E] to-[#007A4D] brightness-110 bg-opacity-90'
+            'bg-gradient-to-r from-green-950 to-green-600 brightness-110 bg-opacity-90'
       ]"
     >
       <!-- Logo -->
@@ -125,7 +126,8 @@
           open ? 'left-0 opacity-100' : 'left-[-100%] opacity-0',
           locale === 'fr'
             ? 'bg-gradient-to-r from-orange-950 to-foni-bg2' // Couleur du fond pour la langue française
-            : 'bg-gradient-to-r from-[#006f73] to-[#00a6b6]' // Couleur du fond pour la langue malgache
+            : //: 'bg-gradient-to-r from-[#006f73] to-[#00a6b6]' // Couleur du fond pour la langue malgache
+              'bg-gradient-to-r from-green-950 to-green-600' // Couleur du fond pour la langue malgache
         ]"
       >
         <li

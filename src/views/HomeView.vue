@@ -1,25 +1,30 @@
 <template>
-
-    <main
-      ref="top-home"
-      id="top-home"
-      :class="[
-        'scroll-mt-24', 
-        locale === 'fr' ? 'bg-gradient-to-b from-orange-50 to-orange-100' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
-      ]"
-    >
+  <main
+    ref="top-home"
+    id="top-home"
+    :class="[
+      'scroll-mt-24',
+      //locale === 'fr' ? 'bg-gradient-to-b from-orange-50 to-orange-100' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
+      locale === 'fr'
+        ? 'bg-gradient-to-b from-orange-50 to-orange-100'
+        : 'bg-gradient-to-br from-green-100 to-green-50'
+    ]"
+  >
     <div v-show="locale" class="">
       <div
         ref="yaacov"
         id="yaacov"
         :class="[
           'transition-all duration-700 ease-out',
-          locale === 'fr' ? 'bg-gradient-to-br from-orange-800 to-orange-900' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
+          locale === 'fr'
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900'
+            : //: 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
+              'bg-gradient-to-br from-green-800 to-green-900',
           'opacity-100', // Opacité fixe pour tout le bloc
-          locale === 'fr' 
-            ? 'transform translate-y-0 scale-100'  // Aucun décalage pour la version française
+          locale === 'fr'
+            ? 'transform translate-y-0 scale-100' // Aucun décalage pour la version française
             : 'transform translate-y-0 scale-105', // Effet de zoom léger en malgache
-          locale === 'mg' ? 'transition-transform duration-700 ease-in-out' : '',  // Ajouter un effet de glissement et zoom en malgache
+          locale === 'mg' ? 'transition-transform duration-700 ease-in-out' : '' // Ajouter un effet de glissement et zoom en malgache
         ]"
       >
         <div
@@ -33,10 +38,13 @@
           </p>
         </div>
         <div>
-          <img :key="locale" src="/src/assets/photos/img1.jpg" class="m-auto w-full xl:w-3/4 2xl:w-2/4" />
+          <img
+            :key="locale"
+            src="/src/assets/photos/img1.jpg"
+            class="m-auto w-full xl:w-3/4 2xl:w-2/4"
+          />
         </div>
       </div>
-
 
       <section
         id="qui"
@@ -49,9 +57,10 @@
         <div
           :class="[
             'm-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
-            locale === 'fr' 
-              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-              : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+            locale === 'fr'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
@@ -105,17 +114,17 @@
         ref="objectifs"
         class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
       >
-
-      <div
-        :class="[
-          'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-6 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
-          locale === 'fr' 
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-        ]"
-      >
+        <div
+          :class="[
+            'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-6 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+            locale === 'fr'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+          ]"
+        >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
-            {{ $t("objectifs.title") }}
+            {{ $t('objectifs.title') }}
           </h1>
         </div>
         <div
@@ -123,198 +132,239 @@
         >
           <div><img src="/src/assets/photos/img2.jpg" class="m-auto pb-8 2xl:w-2/4" /></div>
           <p class="2xl:w-11/12 2xl:py-12">
-            <b>{{ $t("objectifs.heart_title") }}</b> {{ $t("objectifs.heart_description") }} <br /><br />
-            {{ $t("objectifs.reason_title") }}:
-            <b>{{ $t("objectifs.encouragement") }}</b> {{ $t("objectifs.mission_description") }} <b>{{ $t("objectifs.mission_description_suite") }}</b>
+            <b>{{ $t('objectifs.heart_title') }}</b> {{ $t('objectifs.heart_description') }}
+            <br /><br />
+            {{ $t('objectifs.reason_title') }}: <b>{{ $t('objectifs.encouragement') }}</b>
+            {{ $t('objectifs.mission_description') }}
+            <b>{{ $t('objectifs.mission_description_suite') }}</b>
           </p>
         </div>
       </section>
 
-    <section
-      id="actions"
-      ref="actions"
-      class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
-    >
-    <div
-        :class="[
-          'bg-cover bg-center bg-no-repeat bg-photo-4 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
-          locale === 'fr' 
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-        ]"
+      <section
+        id="actions"
+        ref="actions"
+        class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
       >
-
-        <h1
-          class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans text-center"
+        <div
+          :class="[
+            'bg-cover bg-center bg-no-repeat bg-photo-4 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+            locale === 'fr'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+          ]"
         >
-          {{ $t("actions_title") }}
-        </h1>
-      </div>
-      <div
-        class="m-auto py-4 pt-0 px-3 sm:py-8 sm:px-6 my-8 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:px-56"
-      >
-        <div>
-          <img src="/src/assets/photos/img3.jpg" class="m-auto mb-4 w-full md:w-3/4 2xl:w-2/4" />
-        </div>
-
-        <div class="flex 2xl:py-24 2xl:justify-center">
-          <svg
-            class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
+          <h1
+            class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans text-center"
           >
-            <path
-              d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+            {{ $t('actions_title') }}
+          </h1>
+        </div>
+        <div
+          class="m-auto py-4 pt-0 px-3 sm:py-8 sm:px-6 my-8 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:px-56"
+        >
+          <div>
+            <img src="/src/assets/photos/img3.jpg" class="m-auto mb-4 w-full md:w-3/4 2xl:w-2/4" />
+          </div>
+
+          <div class="flex 2xl:py-24 2xl:justify-center">
+            <svg
+              class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+              />
+            </svg>
+            <p>
+              <b>{{ $t('actions_distribution_title') }}</b>
+              {{ $t('actions_distribution_description') }}
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="/src/assets/photos/img4.jpg"
+              class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4"
             />
-          </svg>
-          <p>
-            <b>{{ $t("actions_distribution_title") }}</b> {{ $t("actions_distribution_description") }}
-          </p>
+          </div>
+          <div class="flex mt-2 2xl:py-24 2xl:justify-center">
+            <svg
+              class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+              />
+            </svg>
+            <p>
+              <b>{{ $t('social_projects') }} : </b>{{ $t('social_projects_desc') }}
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="/src/assets/photos/img5.jpg"
+              class="m-auto mt-8 mb-3 w-3/4 md:w-2/4 2xl:w-1/3"
+            />
+          </div>
+
+          <div class="flex mt-4 2xl:py-24 2xl:justify-center">
+            <svg
+              class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+              />
+            </svg>
+            <p>
+              <b>{{ $t('medical_support') }}</b>
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="/src/assets/photos/img6.jpg"
+              class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4"
+            />
+          </div>
+
+          <div class="flex mt-6 2xl:py-24 2xl:justify-center">
+            <svg
+              class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+              />
+            </svg>
+            <p>
+              <b>{{ $t('education_training') }}</b> {{ $t('education_training_desc') }}
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="/src/assets/photos/img10.jpg"
+              class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4"
+            />
+          </div>
+
+          <div class="flex mt-2 2xl:py-24 2xl:justify-center">
+            <svg
+              class="max-w-4 2xl:max-w-6 mr-4 mt-1 xl:mt-3 2xl:mt-1 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"
+              />
+            </svg>
+            <p>
+              <b>{{ $t('land_acquisition') }} </b>{{ $t('land_acquisition_desc') }}
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <img
-            src="/src/assets/photos/img4.jpg"
-            class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4"
-          />
-        </div>
-        <div class="flex mt-2 2xl:py-24 2xl:justify-center">
-      <svg class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/>
-      </svg>
-      <p>
-        <b>{{ $t("social_projects") }} : </b>{{ $t("social_projects_desc") }}
-      </p>
-    </div>
-
-    <div>
-      <img src="/src/assets/photos/img5.jpg" class="m-auto mt-8 mb-3 w-3/4 md:w-2/4 2xl:w-1/3" />
-    </div>
-
-    <div class="flex mt-4 2xl:py-24 2xl:justify-center">
-      <svg class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/>
-      </svg>
-      <p><b>{{ $t("medical_support") }}</b></p>
-    </div>
-
-    <div>
-      <img src="/src/assets/photos/img6.jpg" class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4" />
-    </div>
-
-    <div class="flex mt-6 2xl:py-24 2xl:justify-center">
-      <svg class="max-w-4 2xl:max-w-6 mr-4 mt-1 self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/>
-      </svg>
-      <p><b>{{ $t("education_training") }}</b> {{ $t("education_training_desc") }}</p>
-    </div>
-
-    <div>
-      <img src="/src/assets/photos/img10.jpg" class="m-auto mt-8 mb-3 w-full md:w-3/4 2xl:w-2/4" />
-    </div>
-
-    <div class="flex mt-2 2xl:py-24 2xl:justify-center">
-      <svg class="max-w-4 2xl:max-w-6 mr-4 mt-1 xl:mt-3 2xl:mt-1 self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/>
-      </svg>
-      <p>
-        <b>{{ $t("land_acquisition") }} </b>{{ $t("land_acquisition_desc") }}
-      </p>
-    </div>
-    </div>
-    </section>
-
-    <section
-  ref="ezra"
-  id="ezra"
-  :class="[  
-    'w-full h-[50vh]',  // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
-    locale === 'fr' 
-      ? 'bg-gradient-to-br from-orange-800 to-orange-900'  
-      : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
-  ]"
->
-  <div
-    class="bg-black/80 text-amber-50 h-full flex items-center justify-center px-6 py-12 sm:px-12 sm:py-24 text-white-aura text-center tracking-widest sm:text-lg md:text-4xl md:h-96 2xl:text-4xl 2xl:py-72 2xl:pb-96"
-  >
-    <div>
-      <h3 class="underline mb-4 font-extrabold text-xl sm:text-2xl md:text-4xl 2xl:text-5xl 2xl:mb-8">
-        {{ $t("ezra.title") }}
-      </h3>
-      <p class="font-medium pb-24">
-        {{ $t("ezra.verse") }}
-      </p>
-    </div>
-  </div>
-</section>
-
-    <div
-      :class="[
-        'overflow-hidden h-auto w-auto',
-        locale === 'fr'
-          ? 'bg-gradient-to-b from-orange-950 to-orange-900'
-          : 'bg-gradient-to-b from-[#006f73] to-[#00a6b6]'
-      ]"
-    >
-    
-      <img
-        src="/src/assets/photos/img9.jpg"
-        class="w-full h-auto object-contain max-w-screen-md mx-auto"
-      />
-    </div>
-
-
-    <section
-      id="fsoutien"
-      ref="fsoutien"
-      class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
-    >
-
-    <div
-        :class="[  
-          'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-1 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
-          locale === 'fr'  
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'  
-            : 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'  
+      <section
+        ref="ezra"
+        id="ezra"
+        :class="[
+          'w-full h-[50vh]', // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
+          locale === 'fr'
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900'
+            : //: 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
+              'bg-gradient-to-br from-green-800 to-green-900'
         ]"
       >
+        <div
+          class="bg-black/80 text-amber-50 h-full flex items-center justify-center px-6 py-12 sm:px-12 sm:py-24 text-white-aura text-center tracking-widest sm:text-lg md:text-4xl md:h-96 2xl:text-4xl 2xl:py-72 2xl:pb-96"
+        >
+          <div>
+            <h3
+              class="underline mb-4 font-extrabold text-xl sm:text-2xl md:text-4xl 2xl:text-5xl 2xl:mb-8"
+            >
+              {{ $t('ezra.title') }}
+            </h3>
+            <p class="font-medium pb-24">
+              {{ $t('ezra.verse') }}
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <div
+        :class="[
+          'overflow-hidden h-auto w-auto',
+          locale === 'fr'
+            ? 'bg-gradient-to-b from-orange-950 to-orange-900'
+            : //'bg-gradient-to-b from-[#006f73] to-[#00a6b6]'
+              'bg-gradient-to-br from-green-950 to-green-900'
+        ]"
+      >
+        <img
+          src="/src/assets/photos/img9.jpg"
+          class="w-full h-auto object-contain max-w-screen-md mx-auto"
+        />
+      </div>
+
+      <section
+        id="fsoutien"
+        ref="fsoutien"
+        class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
+      >
+        <div
+          :class="[
+            'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-1 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
+            locale === 'fr'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              : //'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+          ]"
+        >
           <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
-            {{ $t("supports.title") }}
+            {{ $t('supports.title') }}
           </h1>
         </div>
 
         <div
           class="m-auto py-4 px-4 sm:py-8 sm:px-8 my-8 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:py-24 2xl:px-56"
         >
-          <p>{{ $t("supports.description") }}</p>
+          <p>{{ $t('supports.description') }}</p>
 
           <div class="flex mt-6 items-center justify-start flex-wrap">
-              <svg
-                      class="max-w-8 2xl:max-w-8 mr-2 mt-1 self-center"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512"
-                    >
+            <svg
+              class="max-w-8 2xl:max-w-8 mr-2 mt-1 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
               <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
               <path
                 d="M352 64A64 64 0 1 0 224 64a64 64 0 1 0 128 0zM232.7 264l22.9 31.5c6.5 8.9 16.3 14.7 27.2 16.1s21.9-1.7 30.4-8.7l88-72c17.1-14 19.6-39.2 5.6-56.3s-39.2-19.6-56.3-5.6l-55.2 45.2-26.2-36C253.6 156.7 228.6 144 202 144c-30.9 0-59.2 17.1-73.6 44.4L79.8 280.9c-20.2 38.5-9.4 85.9 25.6 111.8L158.6 432 72 432c-22.1 0-40 17.9-40 40s17.9 40 40 40l208 0c17.3 0 32.6-11.1 38-27.5s-.3-34.4-14.2-44.7L187.7 354l45-90z"
               />
             </svg>
             <h3 class="font-bold text-lg xl:text-2xl 2xl:text-2xl 2xl:py-4">
-              {{ $t("supports.prayers.title") }}
+              {{ $t('supports.prayers.title') }}
             </h3>
             <ul class="w-full mt-2 ml-4 2xl:py-2">
               <li>
                 <i class="fa fa-circle text-xs" aria-hidden="true"></i>
-                {{ $t("supports.prayers.team") }}
+                {{ $t('supports.prayers.team') }}
               </li>
               <li class="mt-2 2xl:mt-4">
                 <i class="fa fa-circle text-xs" aria-hidden="true"></i>
-                {{ $t("supports.prayers.beneficiaries") }}
+                {{ $t('supports.prayers.beneficiaries') }}
               </li>
               <li class="mt-2 2xl:mt-4">
                 <i class="fa fa-circle text-xs" aria-hidden="true"></i>
-                {{ $t("supports.prayers.vision") }}
+                {{ $t('supports.prayers.vision') }}
               </li>
             </ul>
           </div>
@@ -331,182 +381,178 @@
               />
             </svg>
             <h3 class="font-bold text-lg xl:text-2xl 2xl:text-2xl 2xl:py-4">
-              {{ $t("supports.donations.title") }}
+              {{ $t('supports.donations.title') }}
             </h3>
             <p class="w-full mt-2 ml-4">
-              {{ $t("supports.donations.description") }}
+              {{ $t('supports.donations.description') }}
             </p>
           </div>
           <div class="flex mt-6 items-center justify-start flex-wrap">
-                  <svg
-                    class="max-w-12 2xl:max-w-10 mr-2 mt-1 self-center"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 512"
-                  >
-                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                      d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352l41.8 0c26.5 0 48-21.5 48-48l0-128c0-26.5-21.5-48-48-48l-76 0-4 0-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48-80 0c-26.5 0-48 21.5-48 48L0 304c0 26.5 21.5 48 48 48l108.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z"
-                    />
-                  </svg>
-                  <h3 class="font-bold text-lg xl:text-2xl 2xl:py-4"> {{ $t("supports.donations.dons_nature") }} </h3>
-                </div>
+            <svg
+              class="max-w-12 2xl:max-w-10 mr-2 mt-1 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352l41.8 0c26.5 0 48-21.5 48-48l0-128c0-26.5-21.5-48-48-48l-76 0-4 0-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48-80 0c-26.5 0-48 21.5-48 48L0 304c0 26.5 21.5 48 48 48l108.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z"
+              />
+            </svg>
+            <h3 class="font-bold text-lg xl:text-2xl 2xl:py-4">
+              {{ $t('supports.donations.dons_nature') }}
+            </h3>
+          </div>
         </div>
       </section>
 
+      <section
+        id="soutien"
+        ref="soutien"
+        class="w-full mb-4 scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
+      >
+        <div
+          :class="[
+            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
+            locale === 'fr'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+          ]"
+        >
+          <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
+            {{ $t('soutien.title') }}
+          </h1>
+        </div>
 
-          <section
-            id="soutien"
-            ref="soutien"
-            class="w-full mb-4 scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-700"
+        <div
+          class="m-auto py-2 px-4 sm:py-4 sm:px-8 my-6 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:py-24 2xl:px-56"
+        >
+          <div class="flex mt-4 items-center justify-start flex-wrap">
+            <svg
+              class="max-w-4 xl:max-w-6 sm:max-w-5 mr-2 mt-1 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
+              />
+            </svg>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">
+              {{ $t('soutien.specificWork') }}
+            </h3>
+          </div>
+
+          <div
+            id="soutien-par-oeuvre"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 lg:gap-y-36 p-8 pt-0 mt-8 mb-0 my-24 items-center"
           >
-
+            <!-- donSiegeMpy -->
             <div
-              :class="[
-                'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
-                locale === 'fr' 
-                  ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-                  : 'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
-              ]"
+              ref="donSiegeMpy"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-1"
             >
-
-              <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
-                {{ $t("soutien.title") }}
-              </h1>
-            </div>
-
-            <div
-              class="m-auto py-2 px-4 sm:py-4 sm:px-8 my-6 max-w-lg md:max-w-full text-amber-950 text-sm sm:text-base tracking-wide xl:text-xl 2xl:py-24 2xl:px-56"
-            >
-              <div class="flex mt-4 items-center justify-start flex-wrap">
-                <svg
-                  class="max-w-4 xl:max-w-6 sm:max-w-5 mr-2 mt-1 self-center"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
-                  />
-                </svg>
-                <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">
-                  {{ $t("soutien.specificWork") }}
-                </h3>
-              </div>
-
-              <div
-                id="soutien-par-oeuvre"
-                class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 lg:gap-y-36 p-8 pt-0 mt-8 mb-0 my-24 items-center"
+              <a
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
               >
-                <!-- donSiegeMpy -->
-                <div
-                  ref="donSiegeMpy"
-                  class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-1"
-                >
-                  <a
-                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR"
-                    class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
-                  >
-                    <img
-                      src="/src/assets/photos/siege-mpy-img.jpg"
-                      alt="siege-mpy"
-                      class="w-full h-full object-cover"
-                    />
-                    <!-- Text overlay on hover -->
-                    <!-- <div
+                <img
+                  src="/src/assets/photos/siege-mpy-img.jpg"
+                  alt="siege-mpy"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <!-- <div
                       class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     >
                       <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
                     </div> -->
-                    <div
-                      class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
-                    >
-                      <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-                    </div>
-                  </a>
-                </div>
-
                 <div
-                  ref="txtSiegeMpy"
-                  class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-1"
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
-                  <h2 class="font-bold text-lg text-center mb-4">{{ $t("soutien.siegeMpyTitle") }}</h2>
-                  <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.siegeMpyDescription')">
-                  </p>
+                  <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
                 </div>
+              </a>
+            </div>
 
-                    <!-- donCentreHospitalier -->
-          <div
-            ref="donCentreHospitalier"
-            class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-2"
-          >
-            <a
-              href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR"
-              class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+            <div
+              ref="txtSiegeMpy"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-1"
             >
-              <img
-                src="/src/assets/photos/hopital-img.jpg"
-                :alt="$t('soutien.hopitalImageAlt')"
-                class="w-full h-full object-cover"
-              />
-              <!-- Text overlay on hover -->
-              <!-- <div
+              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.siegeMpyTitle') }}</h2>
+              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.siegeMpyDescription')"></p>
+            </div>
+
+            <!-- donCentreHospitalier -->
+            <div
+              ref="donCentreHospitalier"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-end lg:col-start-2 lg:row-start-2"
+            >
+              <a
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/hopital-img.jpg"
+                  :alt="$t('soutien.hopitalImageAlt')"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <!-- <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               >
                 <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
               </div> -->
-              <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
-              >
-                <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-              </div>
-            </a>
-          </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
+                >
+                  <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
+                </div>
+              </a>
+            </div>
 
-          <div
-            ref="txtCentreHospitalier"
-            class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-1 lg:row-start-2"
-          >
-            <h2 class="font-bold text-lg text-center mb-4">{{ $t("soutien.hopitalTitre") }}</h2>
-            <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.hopitalDescription')">
-            </p>
-          </div>
-
-          <!-- donCantineTulear -->
-          <div
-            ref="donCantineTulear"
-            class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-3"
-          >
-            <a
-              href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&amount=0&currency_code=EUR"
-              class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+            <div
+              ref="txtCentreHospitalier"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-1 lg:row-start-2"
             >
-              <img
-                src="/src/assets/photos/cantine-img.jpg"
-                :alt="$t('soutien.cantineImageAlt')"
-                class="w-full h-full object-cover"
-              />
-              <!-- Text overlay on hover -->
-              <!-- <div
+              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.hopitalTitre') }}</h2>
+              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.hopitalDescription')"></p>
+            </div>
+
+            <!-- donCantineTulear -->
+            <div
+              ref="donCantineTulear"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-3"
+            >
+              <a
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&amount=0&currency_code=EUR"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+              >
+                <img
+                  src="/src/assets/photos/cantine-img.jpg"
+                  :alt="$t('soutien.cantineImageAlt')"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Text overlay on hover -->
+                <!-- <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               >
                 <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
               </div> -->
-              <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
-              >
-                <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-              </div>
-            </a>
-          </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
+                >
+                  <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
+                </div>
+              </a>
+            </div>
 
-          <div
-            ref="txtCantineTulear"
-            class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-3"
-          >
-            <h2 class="font-bold text-lg text-center mb-4">{{ $t("soutien.cantineTitre") }}</h2>
-            <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.cantineDescription')">
-            </p>
-          </div>
-
+            <div
+              ref="txtCantineTulear"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-3"
+            >
+              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.cantineTitre') }}</h2>
+              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.cantineDescription')"></p>
+            </div>
 
             <!-- donPrisonniers -->
             <div
@@ -526,7 +572,7 @@
                 <div
                   class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
-                  <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
+                  <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
                 </div>
               </a>
             </div>
@@ -534,7 +580,9 @@
               ref="txtPrisonniers"
               class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-1 lg:row-start-4"
             >
-              <h2 class="font-bold text-lg text-center mb-4">{{ $t("soutien.prisonniersTitre") }}</h2>
+              <h2 class="font-bold text-lg text-center mb-4">
+                {{ $t('soutien.prisonniersTitre') }}
+              </h2>
               <!-- Texte -->
               <p class="font-normal" v-html="$t('soutien.prisonniersDescription')"></p>
             </div>
@@ -551,10 +599,12 @@
                 d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
               />
             </svg>
-            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">{{ $t("donSpontane") }}</h3>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">
+              {{ $t('donSpontane') }}
+            </h3>
           </div>
           <div class="mt-2 sm:mt-4 ml-4">
-            <p>{{ $t("compte") }} : Fon'i Yehôshoa</p>
+            <p>{{ $t('compte') }} : Fon'i Yehôshoa</p>
             <div class="hover:text-blue-700">
               <a
                 class="mt-1"
@@ -575,7 +625,9 @@
                 d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160l0 8c0 13.3 10.7 24 24 24l400 0c13.3 0 24-10.7 24-24l0-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224l-64 0 0 196.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512l448 0c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224l-64 0 0 192-40 0 0-192-64 0 0 192-48 0 0-192-64 0 0 192-40 0 0-192zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
               />
             </svg>
-            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">{{ $t("virementBancaire") }}</h3>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">
+              {{ $t('virementBancaire') }}
+            </h3>
           </div>
           <div class="mt-2 sm:mt-4 ml-4">
             <p>BIC : CMCIFR2A</p>
@@ -593,60 +645,88 @@
                 d="M64 64C28.7 64 0 92.7 0 128L0 384c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zm48 160l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM96 336c0-8.8 7.2-16 16-16l352 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-352 0c-8.8 0-16-7.2-16-16zM376 160l80 0c13.3 0 24 10.7 24 24l0 48c0 13.3-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24l0-48c0-13.3 10.7-24 24-24z"
               />
             </svg>
-            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">{{ $t("cheque") }}</h3>
+            <h3 class="font-bold text-lg sm:text-xl xl:text-2xl 2xl:py-4">{{ $t('cheque') }}</h3>
           </div>
           <div class="mt-2 sm:mt-4 ml-4">
-            <p>{{ $t("ordreAssociation") }}</p>
+            <p>{{ $t('ordreAssociation') }}</p>
           </div>
         </div>
 
-        <p class="px-2 sm:px-4 text-sm font-bold text-amber-950 xl:text-2xl 2xl:py-4 2xl:m-auto 2xl:text-center">
-          {{ $t("noteMotifDon") }}
+        <p
+          class="px-2 sm:px-4 text-sm font-bold text-amber-950 xl:text-2xl 2xl:py-4 2xl:m-auto 2xl:text-center"
+        >
+          {{ $t('noteMotifDon') }}
         </p>
       </section>
 
-      <div id="contact"
+      <div
+        id="contact"
         :class="[
           'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay bg-orange-900 w-full flex justify-center items-center 2xl:h-80',
-          locale === 'fr' 
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-            : 'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
+          locale === 'fr'
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+            : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
+              'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
         ]"
       >
-
         <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
-          {{ $t("contactUs") }}
+          {{ $t('contactUs') }}
         </h1>
       </div>
-      <section id="contact" class="p-8 rounded-lg shadow-lg max-w-lg mx-auto bg-white bg-opacity-80 backdrop-blur-md mt-8 mb-12">
+      <section
+        id="contact"
+        class="p-8 rounded-lg shadow-lg max-w-lg mx-auto bg-white bg-opacity-80 backdrop-blur-md mt-8 mb-12"
+      >
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-6"></h2>
 
         <!-- 📞 Numéro de contact de l'association -->
         <div class="bg-indigo-100 p-4 rounded-lg shadow-md mb-6 text-center">
-          <p class="text-gray-700 text-lg font-semibold">📞 {{ $t("contact_association") }} :</p>
+          <p class="text-gray-700 text-lg font-semibold">📞 {{ $t('contact_association') }} :</p>
           <p class="text-xl font-bold text-indigo-600">+33 6 33 05 48 92</p>
           <p class="text-xl font-bold text-indigo-600">Fonyehoshoa@gmail.com</p>
         </div>
 
-        <form 
-          action="https://formspree.io/f/meoebwov" 
-          method="POST" 
+        <form
+          action="https://formspree.io/f/meoebwov"
+          method="POST"
           class="flex flex-col space-y-6"
         >
-          <label class="font-medium text-gray-700"> {{ $t("contact_nom") }} :</label>
-          <input type="text" name="name" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <label class="font-medium text-gray-700"> {{ $t('contact_nom') }} :</label>
+          <input
+            type="text"
+            name="name"
+            required
+            class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
 
-          <label class="font-medium text-gray-700"> {{ $t("contact_email") }} :</label>
-          <input type="email" name="email" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <label class="font-medium text-gray-700"> {{ $t('contact_email') }} :</label>
+          <input
+            type="email"
+            name="email"
+            required
+            class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
 
           <!-- 📱 Champ de saisie pour le téléphone de l'utilisateur -->
-          <label class="font-medium text-gray-700"> {{ $t("contact_tel") }} :</label>
-          <input type="tel" name="phone" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <label class="font-medium text-gray-700"> {{ $t('contact_tel') }} :</label>
+          <input
+            type="tel"
+            name="phone"
+            required
+            class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
 
-          <label class="font-medium text-gray-700"> {{ $t("contact_message") }} :</label>
-          <textarea name="message" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          <label class="font-medium text-gray-700"> {{ $t('contact_message') }} :</label>
+          <textarea
+            name="message"
+            required
+            class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
 
-          <button type="submit" class="bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
+          <button
+            type="submit"
+            class="bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition duration-300"
+          >
             Envoyer
           </button>
         </form>
@@ -657,29 +737,26 @@
         id="footer"
         :class="[
           'bg-gradient-to-b from-orange-950 to-black text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 transition-all duration-700',
-          locale === 'fr' 
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950' 
-            : 'bg-gradient-to-br from-[#00251E] to-[#008F5A] bg-[#004D32] brightness-110'
+          locale === 'fr'
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+            : //'bg-gradient-to-br from-[#00251E] to-[#008F5A] bg-[#004D32] brightness-110'
+              'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
         ]"
       >
-
-
         <p class="mx-auto px-2 italic pt-6 sm:pt-12 xl:text-2xl">
           Association caritative chrétienne
         </p>
 
         <div class="flex mt-4 items-center justify-center flex-wrap">
-          
-          
-    <!-- Icône téléphone + numéro -->
-    <svg
-      class="max-w-4 xl:max-w-8 mr-2 self-center"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 512 512"
-    >
-      <path
-        d="M497.39,361.81l-105.6-48a24,24,0,0,0-28.2,6.91l-42.8,51.4a321.6,321.6,0,0,1-143-143l51.4-42.8a24,24,0,0,0,6.91-28.2l-48-105.6A24.08,24.08,0,0,0,167.39,0H72A24,24,0,0,0,48,24C48,280.77,231.23,464,488,464a24,24,0,0,0,24-24V376A24,24,0,0,0,497.39,361.81Z"
+          <!-- Icône téléphone + numéro -->
+          <svg
+            class="max-w-4 xl:max-w-8 mr-2 self-center"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M497.39,361.81l-105.6-48a24,24,0,0,0-28.2,6.91l-42.8,51.4a321.6,321.6,0,0,1-143-143l51.4-42.8a24,24,0,0,0,6.91-28.2l-48-105.6A24.08,24.08,0,0,0,167.39,0H72A24,24,0,0,0,48,24C48,280.77,231.23,464,488,464a24,24,0,0,0,24-24V376A24,24,0,0,0,497.39,361.81Z"
             />
           </svg>
           <a class="hover:text-red-400 self-center xl:text-2xl" href="tel:+33633054892">
@@ -802,12 +879,25 @@ onMounted(() => {
   const observer = new IntersectionObserver(handleIntersection, observerOptions)
 
   const elementsToObserve = [
-    yaacov, qui, objectifs, actions, ezra, fsoutien,
-    soutien, donSiegeMpy, txtSiegeMpy, donCentreHospitalier, txtCentreHospitalier,
-    donCantineTulear, txtCantineTulear, donPrisonniers, txtPrisonniers, footer
+    yaacov,
+    qui,
+    objectifs,
+    actions,
+    ezra,
+    fsoutien,
+    soutien,
+    donSiegeMpy,
+    txtSiegeMpy,
+    donCentreHospitalier,
+    txtCentreHospitalier,
+    donCantineTulear,
+    txtCantineTulear,
+    donPrisonniers,
+    txtPrisonniers,
+    footer
   ]
 
-  elementsToObserve.forEach(el => {
+  elementsToObserve.forEach((el) => {
     if (el.value) observer.observe(el.value)
   })
 
