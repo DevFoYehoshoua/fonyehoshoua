@@ -277,7 +277,7 @@
         ref="ezra"
         id="ezra"
         :class="[
-          'w-full h-[50vh]', // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
+          'w-full h-[50vh] overflow-hidden', // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900'
             : //: 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
@@ -412,11 +412,11 @@
       >
         <div
           :class="[
-            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 bg-blend-overlay w-full flex justify-center items-center 2xl:h-80',
+            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 w-full flex justify-center items-center 2xl:h-80',
             locale === 'fr'
-              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950 bg-blend-overlay'
               : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950 bg-blend-soft-light'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
@@ -662,11 +662,11 @@
       <div
         id="contact"
         :class="[
-          'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 bg-blend-overlay w-full flex justify-center items-center 2xl:h-80',
+          'bg-cover bg-center bg-no-repeat bg-photo-6 h-64 sm:h-72 w-full flex justify-center items-center 2xl:h-80',
           locale === 'fr'
-            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
+            ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950 bg-blend-overlay'
             : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
-              'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+              'bg-gradient-to-br from-green-800 to-green-900 bg-green-950 bg-blend-soft-light'
         ]"
       >
         <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
