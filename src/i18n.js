@@ -190,7 +190,7 @@ const messages = {
     contact_message: 'Hafatra fohy'
   }
 }
-console.log('DEBUG: i18n messages loaded', messages) // DEBUGGING
+// console.log('DEBUG: i18n messages loaded', messages) // DEBUGGING
 // const i18n = createI18n({
 //   legacy: false, // Utilisation du mode Composition API
 //   locale: 'fr', // Langue par défaut
@@ -198,13 +198,15 @@ console.log('DEBUG: i18n messages loaded', messages) // DEBUGGING
 //   messages
 // })
 // Initialisation d'i18n
-const savedLanguage = localStorage.getItem('language') || 'fr'
-const defaultLocale = savedLanguage && ['fr', 'mg'].includes(savedLanguage) ? savedLanguage : 'fr'
+
+//
+// const savedLanguage = localStorage.getItem('language') || 'fr'
+// const defaultLocale = savedLanguage && ['fr', 'mg'].includes(savedLanguage) ? savedLanguage : 'fr'
 
 const i18n = createI18n({
   legacy: false, // Utiliser `composition API` au lieu de `Options API`
-  // locale: localStorage.getItem('language') || 'fr', // Langue par défaut
-  locale: defaultLocale,
+  locale: localStorage.getItem('language') || 'fr', // Langue par défaut
+  // locale: defaultLocale,
   fallbackLocale: 'fr', // Langue de secours
   messages
 })

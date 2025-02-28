@@ -11,7 +11,7 @@
     >
       <!-- Logo -->
       <a
-        href="#top-home"
+        @click="scrollToSection('top-home')"
         class="col-span-2 col-start-1 flex items-center cursor-pointer self-center gap-1 sm:gap-2"
       >
         <img
