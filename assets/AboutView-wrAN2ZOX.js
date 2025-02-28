@@ -1,1 +1,0 @@
-import{c,a as n,o as r}from"./index-DToce7cr.js";const _=(e,t)=>{const o=e.__vccOpts||e;for(const[s,a]of t)o[s]=a;return o},i={},l={class:"about"};function f(e,t){return r(),c("div",l,t[0]||(t[0]=[n("h1",{class:"text-violet-500"},"This is an about page",-1)]))}const d=_(i,[["render",f]]);export{d as default};
