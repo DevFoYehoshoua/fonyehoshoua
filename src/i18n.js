@@ -198,6 +198,7 @@ const messages = {
 //   messages
 // })
 // Initialisation d'i18n
+const savedLanguage = localStorage.getItem('language') || 'fr'
 const defaultLocale = savedLanguage && ['fr', 'mg'].includes(savedLanguage) ? savedLanguage : 'fr'
 
 const i18n = createI18n({
