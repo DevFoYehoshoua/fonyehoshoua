@@ -412,11 +412,11 @@
       >
         <div
           :class="[
-            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 w-full flex justify-center items-center 2xl:h-80',
+            'bg-cover bg-center bg-no-repeat bg-photo-5 h-64 sm:h-72 w-full bg-blend-soft-light flex justify-center items-center 2xl:h-80',
             locale === 'fr'
-              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950 bg-blend-overlay'
+              ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
               : //'bg-gradient-to-br from-[#003B2E] to-[#006f73] bg-[#003B2E]'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950 bg-blend-soft-light'
+                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
