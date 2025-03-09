@@ -156,10 +156,10 @@ const messages = {
     support: 'Fanohanana',
     yaacovTitle: 'Jakoba 1:27',
     yaacovText:
-      "Izao no fivavahana madio sady tsy misy loto eo anatrehan'i Elohima sady Ray: ny mamangy ny kamboty sy ny mpitondratena amin'ny fahoriany, sy ny miaro ny tena tsy hisy pentimpentina avy amin'izao tontolo izao.",
+      "Izao no fivavahana madio sady tsy misy loto eo anatrehan'i Elohîm sady Ray: ny mamangy ny kamboty sy ny mpitondratena amin'ny fahoriany, sy ny miaro ny tena tsy hisy pentimpentina avy amin'izao tontolo izao.",
     whoWeAreTitle: 'Iza moa izahay ?',
     whoWeAreText:
-      "Izahay dia mpilatsaka an-tsitrapo, mpikambana eo anivon'ny Malagasy miely manerantany (zanaka am-pielezana Malagasy) mino an'I Yehôshoa Ha Mashiah (Jesosy Kristy). Mino ny herin'ny tenin'i Elohima izahay ary maniry ny hizara izany mba hahafahan'ny olona mandre sy miaina azy.",
+      "Izahay dia mpilatsaka an-tsitrapo, mpikambana eo anivon'ny Malagasy miely manerantany (zanaka am-pielezana Malagasy) mino an'I Yehôshoa Ha Mashiah (Jesosy Kristy). Mino ny herin'ny tenin'i Elohîm izahay ary maniry ny hizara izany mba hahafahan'ny olona mandre sy miaina azy.",
     ourFunctioningTitle: 'Ny fomba fiasanay',
     ourFunctioningText:
       "Maniry ny hiasa araka ny fitsipika ao amin'ny baiboly izahay ary miara-miasa amina fikambanana samihafa mitovy foto-kevitra aminay. ",
