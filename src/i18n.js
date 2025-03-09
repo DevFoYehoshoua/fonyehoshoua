@@ -62,10 +62,10 @@ const messages = {
     support: 'Soutenir',
     yaacovTitle: 'Yaacov (Jacques) 1 : 27',
     yaacovText:
-      "La religion pure et sans souillure devant notre Elohim et Père, c'est de visiter les orphelins et les veuves dans leurs tribulations, et de se conserver sans tache loin du monde.",
+      "La religion pure et sans souillure devant notre Elohîm et Père, c'est de visiter les orphelins et les veuves dans leurs tribulations, et de se conserver sans tache loin du monde.",
     whoWeAreTitle: 'Qui sommes-nous ?',
     whoWeAreText:
-      "Nous sommes des bénévoles, membres de la diaspora Malagasy ayant foi en Yéhoshoua Ha Mashiah. Nous croyons en la puissance de la parole d'Elohim et nous voulons la partager pour que les Hommes puissent l'entendre et la vivre.",
+      "Nous sommes des bénévoles, membres de la diaspora Malagasy ayant foi en Yéhoshoua Ha Mashiah. Nous croyons en la puissance de la parole d'Elohîm et nous voulons la partager pour que les Hommes puissent l'entendre et la vivre.",
     ourFunctioningTitle: 'Notre fonctionnement',
     ourFunctioningText:
       'Nous voulons fonctionner selon les principes bibliques et travaillons en partenariat avec différentes associations ayant les mêmes valeurs.',
@@ -136,9 +136,9 @@ const messages = {
         "<b>Fanofana trano</b> ho an'ny foiben'ny fikambanana “Madagascar pour Yéhoshoua” (MPY) eto Antananarivo. <br/>Ireo toerana ireo dia ampiasaina amin'ny <b>fanatanterahana ireo hetsiky ny MPY rehetra </b>(toy ny tsena fanampiana ireo sahirana, efi-trano fampianarana (fanjairana, …), birao, fandraisana ireo mpanao iraka, …). <br/>Miara-mientana izahay hampandroso ny asan'ny Ray.",
       siegeMpyDescriptions:
         "Maro ireo maty any Madagasikara noho ny tsy fahampian'ny fahaizana manasitrana. Lafo loatra ny vidin'ny fanafody sy ny fitsaboana raha oharina amin'ny karama sy ny fari-piainan'ny Malagasy maro.\n\nTamin'ny taona 2023, nanao fahasoavana i Tompo Yéhoshoua. Nanomboka nanorina ny Centre Hospitalier Pain Quotidien tany Antananarivo Madagasikara ny fikambanana Pain Quotidien niaraka tamin'ny MPY mba hanome fahafahana ireo Malagasy hotsaboina maimaim-poana.\n\nManohana ity asa ity izahay.",
-      hopitalTitre: 'Ivon-toeram-pitsaboana CENTRE HOSPITALIER PAIN QUOTIDIEN',
+      hopitalTitre: 'CH PAIN QUOTIDIEN',
       hopitalDescription:
-        "<b>Betsaka ny olona maty</b> eto Madagasikara noho ny tsy fahampian'ny enti-manana ahafahana mitsabo tena. <b>Lafo dia lafo ny vidin'ny fanafody sy ny fitsaboana</b> raha oharina amin'ny karama antonony sy ny fari-piainan'ny Malagasy maro. <br /><br /> Tamin'ny taona 2023 dia namindra fo Ny Tompo Yehôshoa. Nanomboka nanangana ny Ivon-toeram-pitsaboana ny fikambanana Pain Quotidien sy ny MPY mpiara miombona antoka aminy, <b>mba hanomezana fitsaboana maimaimpoina ny Malagasy.</b><br />Manohana izany asa izany izahay.",
+        "<b>Betsaka ny olona maty</b> eto Madagasikara noho ny tsy fahampian'ny enti-manana ahafahana mitsabo tena. <b>Lafo dia lafo ny vidin'ny fanafody sy ny fitsaboana</b> raha oharina amin'ny karama antonony sy ny fari-piainan'ny Malagasy maro. <br /><br /> Tamin'ny taona 2023 dia namindra fo Ny Tompo Yehôshoa. Nanomboka nanangana ny Ivon-toera-mpitsaboana ny fikambanana Pain Quotidien sy ny MPY mpiara miombona antoka aminy, <b>mba hanomezana fitsaboana maimaimpoina ny Malagasy.</b><br />Manohana izany asa izany izahay.",
       hopitalSoutenir: 'Manohana',
       cantineTitre: 'FANOMEZANA SAKAFO AN-TSEKOLY ANY TOLIARA',
       cantineDescription:
@@ -156,10 +156,10 @@ const messages = {
     support: 'Fanohanana',
     yaacovTitle: 'Jakoba 1:27',
     yaacovText:
-      "Izao no fivavahana madio sady tsy misy loto eo anatrehan'i Elohîm sady Ray: ny mamangy ny kamboty sy ny mpitondratena amin'ny fahoriany, sy ny miaro ny tena tsy hisy pentimpentina avy amin'izao tontolo izao.",
+      "Izao no fivavahana madio sady tsy misy loto eo anatrehan'i Elôhim sady Ray: ny mamangy ny kamboty sy ny mpitondratena amin'ny fahoriany, sy ny miaro ny tena tsy hisy pentimpentina avy amin'izao tontolo izao.",
     whoWeAreTitle: 'Iza moa izahay ?',
     whoWeAreText:
-      "Izahay dia mpilatsaka an-tsitrapo, mpikambana eo anivon'ny Malagasy miely manerantany (zanaka am-pielezana Malagasy) mino an'I Yehôshoa Ha Mashiah (Jesosy Kristy). Mino ny herin'ny tenin'i Elohîm izahay ary maniry ny hizara izany mba hahafahan'ny olona mandre sy miaina azy.",
+      "Izahay dia mpilatsaka an-tsitrapo, mpikambana eo anivon'ny Malagasy miely manerantany (zanaka am-pielezana Malagasy) mino an'I Yehôshoa Ha Mashiah (Jesosy Kristy). Mino ny herin'ny tenin'i Elôhim izahay ary maniry ny hizara izany mba hahafahan'ny olona mandre sy miaina azy.",
     ourFunctioningTitle: 'Ny fomba fiasanay',
     ourFunctioningText:
       "Maniry ny hiasa araka ny fitsipika ao amin'ny baiboly izahay ary miara-miasa amina fikambanana samihafa mitovy foto-kevitra aminay. ",
