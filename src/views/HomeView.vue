@@ -683,7 +683,7 @@
         <div class="bg-indigo-100 p-4 rounded-lg shadow-md mb-6 text-center">
           <p class="text-gray-700 text-lg font-semibold">📞 {{ $t('contact_association') }} :</p>
           <p class="text-xl font-bold text-indigo-600">+33 6 33 05 48 92</p>
-          <p class="text-xl font-bold text-indigo-600">Fonyehoshoa@gmail.com</p>
+          <p class="text-xl font-bold text-indigo-600">fonyehoshoa@gmail.com</p>
         </div>
 
         <form
@@ -782,7 +782,7 @@
             />
           </svg>
           <a class="hover:text-red-400 self-center xl:text-2xl" href="mailto:fonyehoshoa@gmail.com">
-            Fonyehoshoa@gmail.com
+            fonyehoshoa@gmail.com
           </a>
         </div>
 
