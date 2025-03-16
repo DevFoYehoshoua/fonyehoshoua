@@ -84,21 +84,21 @@
           <div
             class="grid grid-cols-3 gap-4 md:gap-24 lg:gap-36 xl:gap-40 w-full md:w-4/5 2xl:w-3/6 mt-8 2xl:mt-24 mx-auto"
           >
-            <a href="https://www.labnr.org/">
+            <a href="https://www.labnr.org/" target="_blank" rel="noopener noreferrer">
               <img
                 class="w-full h-auto object-cover aspect-square"
                 alt="Logo bonne nouvelle du royaume"
                 src="/src/assets/photos/bnr-logo.jpg"
               />
             </a>
-            <a href="https://objectifciel.fr/">
+            <a href="https://objectifciel.fr/" target="_blank" rel="noopener noreferrer">
               <img
                 class="w-full h-auto object-contain aspect-square"
                 alt="Logo objectif ciel"
                 src="/src/assets/photos/obj-ciel-logo.png"
               />
             </a>
-            <a href="https://madagascarpouryehoshoua.org/">
+            <a href="https://madagascarpouryehoshoua.org/" target="_blank" rel="noopener noreferrer">
               <img
                 class="w-full h-auto object-cover aspect-square"
                 alt="Logo madagascar pour yehoshoa"
@@ -453,7 +453,7 @@
             >
               <a
                 href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR"
-                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
               >
                 <img
                   src="/src/assets/photos/siege-mpy-img.jpg"
@@ -489,7 +489,7 @@
             >
               <a
                 href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR"
-                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
               >
                 <img
                   src="/src/assets/photos/hopital-img.jpg"
@@ -525,7 +525,7 @@
             >
               <a
                 href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&amount=0&currency_code=EUR"
-                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
               >
                 <img
                   src="/src/assets/photos/cantine-img.jpg"
@@ -561,7 +561,7 @@
             >
               <a
                 href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+les+prisonniers&amount=0&currency_code=EUR"
-                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
               >
                 <img
                   src="/src/assets/photos/prisonniers-img.jpg"
@@ -586,7 +586,42 @@
               <!-- Texte -->
               <p class="font-normal" v-html="$t('soutien.prisonniersDescription')"></p>
             </div>
-          </div>
+          <!--Dons Anthonio-->
+          <!-- <div
+              ref="donsAntonio"
+              class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-5"
+            > 
+              <a
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+soin+Antonio&amount=0&currency_code=EUR"
+                class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
+              >
+                <img
+                  src="/src/assets/photos/antonio.jpeg"
+                  :alt="$t('soutien.antonioImageAlt')"
+                  class="w-full h-full object-cover"
+                /> -->
+                <!-- Text overlay on hover -->
+                <!-- <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              >
+                <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
+              </div> -->
+                <!-- <div
+                  class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
+                >
+                  <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
+                </div>
+              </a>
+            </div> -->
+
+            <!-- <div
+              ref="txtAntonio"
+              class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-5"
+              >
+              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.antonio') }}</h2>
+              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.antonioDescription')"></p>
+            </div>-->
+          </div> 
 
           <div class="flex mt-8 items-center justify-start flex-wrap">
             <svg
@@ -609,7 +644,7 @@
               <a
                 class="mt-1"
                 href="https://www.paypal.com/paypalme/FONIYEHOSHOA?v=1&utm_source=unp&utm_medium=email&utm_campaign=RT000481&utm_unptid=8db73e84-b327-11ee-b62a-40a6b72e01ed&ppid=RT000481&cnac=FR&rsta=fr_FR%28fr-FR%29&cust=7V8PETUK6EP3G&unptid=8db73e84-b327-11ee-b62a-40a6b72e01ed&calc=f74051263866b&unp_tpcid=ppme-social-business-profile-created&page=main%3Aemail%3ART000481&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.226.0&tenant_name=PAYPAL&xt=104038%2C127632"
-                >fonyehoshoa@gmail.com</a
+                target="_blank" rel="noopener noreferrer" >fonyehoshoa@gmail.com</a
               >
             </div>
           </div>
@@ -781,7 +816,7 @@
               d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"
             />
           </svg>
-          <a class="hover:text-red-400 self-center xl:text-2xl" href="mailto:fonyehoshoa@gmail.com">
+          <a class="hover:text-red-400 self-center xl:text-2xl" href="mailto:fonyehoshoa@gmail.com" target="_blank" rel="noopener noreferrer">
             fonyehoshoa@gmail.com
           </a>
         </div>
@@ -800,7 +835,7 @@
           </svg>
           <a
             class="self-center hover:text-red-400 xl:text-2xl"
-            href="https://www.facebook.com/profile.php?id=61556205771803"
+            href="https://www.facebook.com/profile.php?id=61556205771803" target="_blank" rel="noopener noreferrer">
           >
             Fon’i Yehôshoa
           </a>
@@ -821,7 +856,7 @@
           <a
             class="self-center hover:text-red-400 xl:text-2xl"
             href="https://www.instagram.com/foni_yehoshoa/"
-          >
+          target="_blank" rel="noopener noreferrer">
             foni_yehoshoa
           </a>
         </div>
@@ -845,6 +880,8 @@ const soutien = ref(null)
 const donSiegeMpy = ref(null)
 const donCentreHospitalier = ref(null)
 const donCantineTulear = ref(null)
+const donsAntonio = ref(null)
+const txtAntonio = ref(null)
 const donPrisonniers = ref(null)
 const txtSiegeMpy = ref(null)
 const txtCentreHospitalier = ref(null)
@@ -907,6 +944,8 @@ onMounted(() => {
     txtCentreHospitalier,
     donCantineTulear,
     txtCantineTulear,
+    donsAntonio,
+    txtAntonio,
     donPrisonniers,
     txtPrisonniers,
     footer

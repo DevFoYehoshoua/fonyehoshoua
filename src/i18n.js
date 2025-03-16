@@ -53,7 +53,9 @@ const messages = {
       prisonniersTitre: 'SOUTIEN AUX PRISONNIERS',
       prisonniersDescription:
         "Les détenus de l'île, souffrant le plus souvent de <b>malnutrition</b>, vivent <b>oubliés de tous</b>, dans des conditions <b>d'exiguïté, de surpopulation et de manque d'hygiène.</b><br /><br /><b>Des denrées alimentaires contre la malnutrition :</b> Bien que quelques prisonniers peuvent se permettre d'acheter de la nourriture et de cuisiner dans leur cellule, la plupart d'entre eux font la queue, chaque après-midi, pour recevoir un repas (le seul de la journée) qui se résume à des racines de manioc bouillies.<br />Nous organisons des visites de la prison d'Antananarivo afin de partager la parole du Seigneur, subvenir aux besoins et proposer des formations pour une future insertion professionnelle.",
-      prisonniersSoutenir: 'Soutenir'
+      prisonniersSoutenir: 'Soutenir',
+      antonio: 'SOUTIEN À ANTONIO',
+      antonioDescription: "Bonjour à tous, je m'appelle <b>Antonio</b>. Issue d'une <b>famille pauvre</b>, la misère m'a amené à prendre les mauvaises décisions ...<br /> <br />À peine 30 ans, je vais devoir <b>me faire amputer la jambe à  cause d'une blessure par balle</b>. <br /><br />J'ai pour unique issu l'amputation car le bout de <b>mon pied droit est totalement nécrosé et cela continue de gangréner vers le haut</b>.<br /> Dans ce cas, je dois <b>me faire opérer très rapidement et demande votre soutien </b>dans la prière pour ma famille et moi qui allons faire face à cette épreuve."
     },
     whoAreWe: 'Qui sommes-nous ?',
     objectives: 'Nos objectifs',

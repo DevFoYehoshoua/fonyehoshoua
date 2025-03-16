@@ -151,7 +151,18 @@
         </li>
       </ul>
     </header>
-
+    <main
+    :class="[
+      //locale === 'fr' ? 'bg-gradient-to-b from-orange-50 to-orange-100' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
+      locale === 'fr'
+        ? 'bg-gradient-to-b from-orange-50 to-orange-100'
+        : 'bg-gradient-to-br from-green-100 to-green-50'
+    ]"
+    >
+      <!-- <Timeline /> -->
+      <!-- <Slider /> -->
+      <!-- <SliderVideos /> -->
+    </main>
     <RouterView />
   </div>
 </template>
@@ -159,6 +170,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import Timeline from '/src/views/Timeline.vue';
+import Slider from './views/Slider.vue';
+import SliderVideos from './views/SliderVideos.vue';
 
 const open = ref(false)
 const { locale } = useI18n()
