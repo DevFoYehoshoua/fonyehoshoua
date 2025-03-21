@@ -22,26 +22,90 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 // Images
-import img1 from '@/assets/photos/slides/chu3.jpeg';
+import img1 from '@/assets/photos/slides/chPainQuot.png';
 import img2 from '@/assets/photos/slides/chu2.jpeg';
 import img3 from '@/assets/photos/slides/chu1.jpeg';
-import img4 from '@/assets/photos/slides/enfant_cantine1.jpeg';
-import img5 from '@/assets/photos/slides/enfant_cantine2.jpg';
-import img6 from '@/assets/photos/slides/nilaina1.jpg';
-import img7 from '@/assets/photos/slides/prisonniers1.jpg';
-import img8 from '@/assets/photos/slides/prisonniers2.jpg';
-import img9 from '@/assets/photos/slides/prisonniers3.jpg';
+import img4 from '@/assets/photos/slides/chu3.jpeg';
+import img5 from '@/assets/photos/slides/chu4.jpeg';
+import img6 from '@/assets/photos/slides/chu5.jpeg';
+import img7 from '@/assets/photos/slides/cantineTulear.png';
+import img8 from '@/assets/photos/slides/cantineT1.jpeg';
+import img9 from '@/assets/photos/slides/cantineT2.jpeg';
+import img10 from '@/assets/photos/slides/cantineT3.jpeg';
+import img11 from '@/assets/photos/slides/cantineT4.jpeg';
+import img12 from '@/assets/photos/slides/cantineT5.jpeg';
+import img13 from '@/assets/photos/slides/cantineT6.jpeg';
+import img14 from '@/assets/photos/slides/cantineT7.jpeg';
+import img15 from '@/assets/photos/slides/cantineT8.jpeg';
+import img16 from '@/assets/photos/slides/cantineT9.jpeg';
+import img17 from '@/assets/photos/slides/cantineT10.jpeg';
+import img18 from '@/assets/photos/slides/soutiensPrisonniers.png';
+import img19 from '@/assets/photos/slides/soutiensPrisonniers1.jpeg';
+import img20 from '@/assets/photos/slides/soutiensPrisonniers2.jpeg';
+import img21 from '@/assets/photos/slides/soutiensPrisonniers3.jpeg';
+import img22 from '@/assets/photos/slides/soutiensPrisonniers4.jpeg';
+import img23 from '@/assets/photos/slides/soutiensPrisonniers5.jpeg';
+import img24 from '@/assets/photos/slides/nilaina.png';
+import img25 from '@/assets/photos/img5.jpg';
+import img26 from '@/assets/photos/slides/nilaina1.jpg';
+import img27 from '@/assets/photos/slides/cantineTana.png';
+import img28 from '@/assets/photos/slides/cantineTana1.jpeg';
+import img29 from '@/assets/photos/slides/cantineTana2.jpeg';
+import img30 from '@/assets/photos/slides/cantineTana3.jpeg';
+import img31 from '@/assets/photos/slides/cantineTana4.jpeg';
+import img32 from '@/assets/photos/slides/cantineTana5.jpeg';
+import img33 from '@/assets/photos/slides/cantineTana6.jpeg';
+import img34 from '@/assets/photos/slides/cantineTana7.jpeg';
+import img35 from '@/assets/photos/slides/cantineTana8.jpeg';
+import img36 from '@/assets/photos/slides/cantineTana9.jpeg';
+import img37 from '@/assets/photos/slides/cantineTana10.jpeg';
+import img38 from '@/assets/photos/slides/cantineTana11.jpeg';
+import img39 from '@/assets/photos/slides/cantineTana12.jpeg';
+import img40 from '@/assets/photos/slides/cantineTana13.jpeg';
+import img41 from '@/assets/photos/slides/cantineTana14.jpeg';
 
 const images = ref([
-  { src: img1, alt: 'Image 1', caption: 'Texte sur l\'image 1' },
-  { src: img2, alt: 'Image 2', caption: 'Texte sur l\'image 2' },
-  { src: img3, alt: 'Image 3', caption: 'Texte sur l\'image 3' },
-  { src: img4, alt: 'Image 4', caption: 'Texte sur l\'image 4' },
-  { src: img5, alt: 'Image 5', caption: 'Texte sur l\'image 5' },
-  { src: img6, alt: 'Image 6', caption: 'Texte sur l\'image 6' },
-  { src: img7, alt: 'Image 7', caption: 'Texte sur l\'image 7' },
-  { src: img8, alt: 'Image 8', caption: 'Texte sur l\'image 8' },
-  { src: img9, alt: 'Image 9', caption: 'Texte sur l\'image 9' },
+  { src: img1, alt: 'Image 1'},
+  { src: img2, alt: 'Image 2'},
+  { src: img3, alt: 'Image 3'},
+  { src: img4, alt: 'Image 4'},
+  { src: img5, alt: 'Image 5'},
+  { src: img6, alt: 'Image 6'},
+  { src: img7, alt: 'Image 7'},
+  { src: img8, alt: 'Image 8'},
+  { src: img9, alt: 'Image 9'},
+  { src: img10, alt: 'Image 10'},
+  { src: img11, alt: 'Image 11'},
+  { src: img12, alt: 'Image 12'},
+  { src: img13, alt: 'Image 13'},
+  { src: img14, alt: 'Image 14'},
+  { src: img15, alt: 'Image 15'},
+  { src: img16, alt: 'Image 16'},
+  { src: img17, alt: 'Image 17'},
+  { src: img18, alt: 'Image 18'},
+  { src: img19, alt: 'Image 19'},
+  { src: img20, alt: 'Image 20'},
+  { src: img21, alt: 'Image 21'},
+  { src: img22, alt: 'Image 22'},
+  { src: img23, alt: 'Image 23'},
+  { src: img24, alt: 'Image 24'},
+  { src: img25, alt: 'Image 25'},
+  { src: img26, alt: 'Image 26'},
+  { src: img27, alt: 'Image 27'},
+  { src: img28, alt: 'Image 28'},
+  { src: img29, alt: 'Image 29'},
+  { src: img30, alt: 'Image 30'},
+  { src: img31, alt: 'Image 31'},
+  { src: img32, alt: 'Image 32'},
+  { src: img33, alt: 'Image 33'},
+  { src: img34, alt: 'Image 34'},
+  { src: img35, alt: 'Image 35'},
+  { src: img36, alt: 'Image 36'},
+  { src: img37, alt: 'Image 37'},
+  { src: img38, alt: 'Image 38'},
+  { src: img39, alt: 'Image 39'},
+  { src: img40, alt: 'Image 40'},
+  { src: img41, alt: 'Image 41'},
 ]);
 
 
@@ -68,7 +132,7 @@ const prevSlide = () => {
 
 // Auto-slide toutes les 5 secondes
 const startAutoSlide = () => {
-  interval = setInterval(nextSlide, 5000);
+  interval = setInterval(nextSlide, 30000);
 };
 
 onMounted(startAutoSlide);
@@ -103,11 +167,8 @@ onUnmounted(() => clearInterval(interval));
 
 .slide img {
   width: 100%;
-  height: auto; /* Évite la déformation */
+  height: 400px;
   object-fit: cover;
-  display: block;
-  max-height: 500px; /* Fixe une hauteur max pour éviter l’agrandissement */
-  object-fit: cover; /* Ajuste pour bien remplir le cadre */
 }
 
 
@@ -128,36 +189,54 @@ onUnmounted(() => clearInterval(interval));
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  background: rgba(0, 0, 0, 0.6);
   padding: 10px;
   border-radius: 5px;
 }
 
-/* Boutons */
+/* Boutons de navigation */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1); /* Fond encore plus transparent */
+  backdrop-filter: blur(5px); /* Effet de flou pour un look moderne */
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 50%;
   z-index: 3;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.3; /* Moins visible au repos */
 }
 
+/* Positionnement */
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Effet au survol */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.3); /* Un peu plus visible au survol */
+  opacity: 1; /* Entièrement visible au survol */
+  transform: translateY(-50%) scale(1.1); /* Léger agrandissement */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Ombre légère */
 }
 
-@media screen and (max-width: 768px) {
+/* Ajustement sur grands écrans */
+@media screen and (min-width: 1024px) {
   .slide img {
-    max-height: 300px; /* Moins grand sur mobile */
+    height: 500px; /* Augmente la hauteur */
+    object-fit: contain; /* Évite de couper les images */
   }
 }
+
+/* Ajustement sur petits écrans */
+@media screen and (max-width: 768px) {
+  .slide img {
+    max-height: 400px; /* Réduit encore sur mobiles */
+    min-height: 300px;
+  }
+}
+
 </style>

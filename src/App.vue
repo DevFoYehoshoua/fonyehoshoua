@@ -160,7 +160,7 @@
     ]"
     >
       <!-- <Timeline /> -->
-      <!-- <Slider /> -->
+      <Slider />
       <!-- <SliderVideos /> -->
     </main>
     <RouterView />
