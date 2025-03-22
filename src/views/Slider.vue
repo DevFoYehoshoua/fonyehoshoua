@@ -22,13 +22,13 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 // Images
-import img1 from '@/assets/photos/slides/chPainQuot2.png';
+import img1 from '@/assets/photos/slides/chPainQuot3.png';
 import img2 from '@/assets/photos/slides/chu2.jpeg';
 import img3 from '@/assets/photos/slides/chu1.jpeg';
 import img4 from '@/assets/photos/slides/chu3.jpeg';
 import img5 from '@/assets/photos/slides/chu4.jpeg';
 import img6 from '@/assets/photos/slides/chu5.jpeg';
-import img7 from '@/assets/photos/slides/cantineTulear2.png';
+import img7 from '@/assets/photos/slides/cantineTulear3.png';
 import img8 from '@/assets/photos/slides/cantineT1.jpeg';
 import img9 from '@/assets/photos/slides/cantineT2.jpeg';
 import img10 from '@/assets/photos/slides/cantineT3.jpeg';
@@ -39,16 +39,16 @@ import img14 from '@/assets/photos/slides/cantineT7.jpeg';
 import img15 from '@/assets/photos/slides/cantineT8.jpeg';
 import img16 from '@/assets/photos/slides/cantineT9.jpeg';
 import img17 from '@/assets/photos/slides/cantineT10.jpeg';
-import img18 from '@/assets/photos/slides/soutiensPrison2.png';
+import img18 from '@/assets/photos/slides/soutiensPrison3.png';
 import img19 from '@/assets/photos/slides/soutiensPrisonniers1.jpeg';
 import img20 from '@/assets/photos/slides/soutiensPrisonniers2.jpeg';
 import img21 from '@/assets/photos/slides/soutiensPrisonniers3.jpeg';
 import img22 from '@/assets/photos/slides/soutiensPrisonniers4.jpeg';
 import img23 from '@/assets/photos/slides/soutiensPrisonniers5.jpeg';
-import img24 from '@/assets/photos/slides/nilaina2.png';
+import img24 from '@/assets/photos/slides/nilaina3.png';
 import img25 from '@/assets/photos/img5.jpg';
 import img26 from '@/assets/photos/slides/nilaina1.jpg';
-import img27 from '@/assets/photos/slides/cantineTana2.png';
+import img27 from '@/assets/photos/slides/cantineTanaMPY3.png';
 import img28 from '@/assets/photos/slides/cantineTana1.jpeg';
 import img29 from '@/assets/photos/slides/cantineTana2.jpeg';
 import img30 from '@/assets/photos/slides/cantineTana3.jpeg';
@@ -173,14 +173,14 @@ onUnmounted(() => clearInterval(interval));
 
 
 /* Overlay sombre */
-.overlay {
+ .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
+  background: rgba(0, 0, 0, 0.2); /* Moins foncé */
+} 
 
 /* Texte */
 .text {
