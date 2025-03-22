@@ -215,13 +215,22 @@ onUnmounted(() => clearInterval(interval));
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Effet au survol */
-.prev:hover, .next:hover {
-  background: rgba(255, 255, 255, 0.3); /* Un peu plus visible au survol */
-  opacity: 1; /* Entièrement visible au survol */
-  transform: translateY(-50%) scale(1.1); /* Léger agrandissement */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Ombre légère */
+/* Supprimer la surbrillance lors du clic */
+.prev:focus,
+.next:focus {
+  outline: none;
+  box-shadow: none;
 }
+
+/* Effet au survol adouci */
+.prev:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.2); /* Un effet plus subtil */
+  opacity: 0.9; /* Légèrement moins visible */
+  transform: translateY(-30%) scale(1.05); /* Agrandissement plus discret */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Ombre plus légère */
+  transition: all 0.2s ease-in-out; /* Animation fluide */
+}
+
 
 /* Réinitialiser l'opacité après clic */
 .prev:active, .next:active {
