@@ -23,7 +23,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 // Images
 import img1 from '@/assets/photos/slides/chPainQuot3.png';
-import img2 from '@/assets/photos/slides/chu2.jpeg';
+import img2 from '@/assets/photos/slides/chPainQuot4.png';
 import img3 from '@/assets/photos/slides/chu1.jpeg';
 import img4 from '@/assets/photos/slides/chu3.jpeg';
 import img5 from '@/assets/photos/slides/chu4.jpeg';
@@ -40,11 +40,11 @@ import img15 from '@/assets/photos/slides/cantineT8.jpeg';
 import img16 from '@/assets/photos/slides/cantineT9.jpeg';
 import img17 from '@/assets/photos/slides/cantineT10.jpeg';
 import img18 from '@/assets/photos/slides/soutiensPrison3.png';
-import img19 from '@/assets/photos/slides/soutiensPrisonniers1.jpeg';
+import img19 from '@/assets/photos/slides/soutiensPrisonniers6.png';
 import img20 from '@/assets/photos/slides/soutiensPrisonniers2.jpeg';
 import img21 from '@/assets/photos/slides/soutiensPrisonniers3.jpeg';
 import img22 from '@/assets/photos/slides/soutiensPrisonniers4.jpeg';
-import img23 from '@/assets/photos/slides/soutiensPrisonniers5.jpeg';
+import img23 from '@/assets/photos/slides/soutiensPrisonniers7.png';
 import img24 from '@/assets/photos/slides/nilaina3.png';
 import img25 from '@/assets/photos/img5.jpg';
 import img26 from '@/assets/photos/slides/nilaina1.jpg';
