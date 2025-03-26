@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container">
+  <div class="slider-container" @mouseenter="stopAutoSlide" @mouseleave="startAutoSlide">
     <div class="slider" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div 
         class="slide" 
@@ -39,7 +39,7 @@ import img14 from '@/assets/photos/slides/cantineT7.jpeg';
 import img15 from '@/assets/photos/slides/cantineT8.jpeg';
 import img16 from '@/assets/photos/slides/cantineT9.jpeg';
 import img17 from '@/assets/photos/slides/cantineT10.jpeg';
-import img18 from '@/assets/photos/slides/soutiensPrison3.png';
+import img18 from '@/assets/photos/slides/soutiensPrisons.png';
 import img19 from '@/assets/photos/slides/soutiensPrisonniers6.png';
 import img20 from '@/assets/photos/slides/soutiensPrisonniers2.jpeg';
 import img21 from '@/assets/photos/slides/soutiensPrisonniers3.jpeg';
@@ -113,12 +113,22 @@ const currentIndex = ref(0);
 let interval = null;
 
 // Fonction pour passer à l'image suivante
+// const nextSlide = () => {
+//   if (currentIndex.value < images.value.length - 1) {
+//     currentIndex.value++;
+//   } else {
+//     currentIndex.value = 0; // Revient à la première image
+//   }
+// };
+
 const nextSlide = () => {
   if (currentIndex.value < images.value.length - 1) {
     currentIndex.value++;
   } else {
     currentIndex.value = 0; // Revient à la première image
   }
+  clearInterval(interval); // Nettoyer l'intervalle à chaque changement
+  startAutoSlide(); // Relancer l'auto-slide après chaque transition
 };
 
 // Fonction pour revenir à l'image précédente
@@ -137,20 +147,29 @@ const startAutoSlide = () => {
 
 onMounted(startAutoSlide);
 onUnmounted(() => clearInterval(interval));
+const handleKeydown = (event) => {
+  if (event.key === 'ArrowRight') nextSlide();
+  if (event.key === 'ArrowLeft') prevSlide();
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown);
+});
 </script>
 
 <style scoped>
 /* Conteneur principal */
 .slider-container {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
+  width: 100vw; /* Prend toute la largeur de l'écran */
   overflow: hidden;
   height: auto;
-  max-height: 90vh; /* Pour éviter un trop grand agrandissement */
+  max-height: 90vh; /* Évite un trop grand agrandissement */
 }
-
 
 /* Wrapper des slides */
 .slider {
@@ -161,16 +180,16 @@ onUnmounted(() => clearInterval(interval));
 
 /* Chaque slide */
 .slide {
-  min-width: 100%;
+  min-width: 100vw; /* Assure que chaque slide occupe toute la largeur de l'écran */
   position: relative;
 }
 
+/* Images dans le slider */
 .slide img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  width: 100vw;  /* Prend toute la largeur */
+  height: 100vh; /* Ajuste à la hauteur de l'écran */
+  object-fit: cover; /* Remplit tout l’espace sans déformation */
 }
-
 
 /* Overlay sombre */
  .overlay {
@@ -255,6 +274,7 @@ onUnmounted(() => clearInterval(interval));
     min-height: 300px;
   }
 }
+
 
 
 </style>
