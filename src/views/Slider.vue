@@ -112,14 +112,6 @@ const images = ref([
 const currentIndex = ref(0);
 let interval = null;
 
-// Fonction pour passer à l'image suivante
-// const nextSlide = () => {
-//   if (currentIndex.value < images.value.length - 1) {
-//     currentIndex.value++;
-//   } else {
-//     currentIndex.value = 0; // Revient à la première image
-//   }
-// };
 
 const nextSlide = () => {
   if (currentIndex.value < images.value.length - 1) {

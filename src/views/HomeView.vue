@@ -4,7 +4,6 @@
     id="top-home"
     :class="[
       'scroll-mt-24',
-      //locale === 'fr' ? 'bg-gradient-to-b from-orange-50 to-orange-100' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
       locale === 'fr'
         ? 'bg-gradient-to-b from-orange-50 to-orange-100'
         : 'bg-gradient-to-br from-green-100 to-green-50'
@@ -18,12 +17,11 @@
           'transition-all duration-700 ease-out',
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900'
-            : //: 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
-              'bg-gradient-to-br from-green-800 to-green-900',
+            : 'bg-gradient-to-br from-green-800 to-green-900',
           'opacity-100', // Opacité fixe pour tout le bloc
           locale === 'fr'
             ? 'transform translate-y-0 scale-100' // Aucun décalage pour la version française
-            : 'transform translate-y-0 scale-105', // Effet de zoom léger en malgache
+            : 'transform translate-y-0 scale-100', // Effet de zoom léger en malgache
           locale === 'mg' ? 'transition-transform duration-700 ease-in-out' : '' // Ajouter un effet de glissement et zoom en malgache
         ]"
       >
@@ -51,16 +49,13 @@
         ref="qui"
         class="w-full scroll-mt-24 opacity-0 transform translate-y-10 transition-all duration-[1500ms]"
       >
-        <!-- <div
-          class="m-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light bg-orange-950 w-full flex justify-center items-center"
-        > -->
+
         <div
           :class="[
             'm-0 bg-cover bg-center bg-no-repeat bg-photo-2 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
             locale === 'fr'
               ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
-              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+              : 'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
@@ -119,8 +114,7 @@
             'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-6 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
             locale === 'fr'
               ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
-              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+              : 'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-sans">
@@ -151,8 +145,7 @@
             'bg-cover bg-center bg-no-repeat bg-photo-4 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
             locale === 'fr'
               ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
-              : //: 'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+              : 'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1
@@ -280,8 +273,7 @@
           'w-full h-[50vh] overflow-hidden', // Pleine largeur, hauteur égale à 50% de la hauteur de la fenêtre
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900'
-            : //: 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]',
-              'bg-gradient-to-br from-green-800 to-green-900'
+            : 'bg-gradient-to-br from-green-800 to-green-900'
         ]"
       >
         <div
@@ -305,8 +297,7 @@
           'overflow-hidden h-auto w-auto',
           locale === 'fr'
             ? 'bg-gradient-to-b from-orange-950 to-orange-900'
-            : //'bg-gradient-to-b from-[#006f73] to-[#00a6b6]'
-              'bg-gradient-to-br from-green-950 to-green-900'
+            : 'bg-gradient-to-br from-green-950 to-green-900'
         ]"
       >
         <img
@@ -325,8 +316,7 @@
             'bg-cover bg-center md:bg-bottom bg-no-repeat bg-photo-1 h-64 sm:h-72 2xl:h-80 bg-blend-soft-light w-full flex justify-center items-center',
             locale === 'fr'
               ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
-              : //'bg-gradient-to-br from-[#00251E] to-[#007A4D] bg-[#00251E] brightness-110 bg-opacity-90'
-                'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+              : 'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
           ]"
         >
           <h1 class="text-white font-bold text-3xl sm:text-4xl font-sans text-center 2xl:text-5xl">
@@ -461,11 +451,6 @@
                   class="w-full h-full object-cover"
                 />
                 <!-- Text overlay on hover -->
-                <!-- <div
-                      class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    >
-                      <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-                    </div> -->
                 <div
                   class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
@@ -497,11 +482,6 @@
                   class="w-full h-full object-cover"
                 />
                 <!-- Text overlay on hover -->
-                <!-- <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              >
-                <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-              </div> -->
                 <div
                   class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
@@ -533,11 +513,6 @@
                   class="w-full h-full object-cover"
                 />
                 <!-- Text overlay on hover -->
-                <!-- <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              >
-                <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-              </div> -->
                 <div
                   class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
@@ -779,8 +754,7 @@
           ' text-amber-50 text-sm sm:text-base text-center pb-14 sm:pb-24 transition-all duration-700',
           locale === 'fr'
             ? 'bg-gradient-to-br from-orange-800 to-orange-900 bg-orange-950'
-            : //'bg-gradient-to-br from-[#00251E] to-[#008F5A] bg-[#004D32] brightness-110'
-              'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
+            : 'bg-gradient-to-br from-green-800 to-green-900 bg-green-950'
         ]"
       >
         <p class="mx-auto px-2 italic pt-6 sm:pt-12 xl:text-2xl">

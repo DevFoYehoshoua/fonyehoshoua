@@ -153,15 +153,14 @@
     </header>
     <main
     :class="[
-      //locale === 'fr' ? 'bg-gradient-to-b from-orange-50 to-orange-100' : 'bg-gradient-to-br from-[#006f73] to-[#00a6b6]'
       locale === 'fr'
         ? 'bg-gradient-to-b from-orange-50 to-orange-100'
         : 'bg-gradient-to-br from-green-100 to-green-50'
     ]"
     >
       <!-- <Timeline /> -->
-      <Slider />
-      <!-- <SliderVideos /> -->
+      <!-- <Slider /> -->
+      <SliderVideos />
     </main>
     <RouterView />
   </div>
