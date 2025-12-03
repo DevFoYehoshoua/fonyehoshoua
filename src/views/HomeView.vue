@@ -83,7 +83,7 @@
               <img
                 class="w-full h-auto object-cover aspect-square"
                 alt="Logo bonne nouvelle du royaume"
-                src="/src/assets/photos/bnr-logo.jpg"
+                src="/src/assets/photos/logoBNR.jpeg"
               />
             </a>
             <a href="https://objectifciel.fr/" target="_blank" rel="noopener noreferrer">
@@ -465,6 +465,17 @@
             >
               <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.siegeMpyTitle') }}</h2>
               <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.siegeMpyDescription')"></p>
+              <!-- Bouton Soutenir descendu -->
+                <div class="flex justify-center mt-10">
+                  <a
+                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition"
+                  >
+                    {{ $t('soutien.support') }}
+                  </a>
+                </div>
             </div>
 
             <!-- donCentreHospitalier -->
@@ -496,6 +507,17 @@
             >
               <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.hopitalTitre') }}</h2>
               <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.hopitalDescription')"></p>
+              <!-- Bouton Soutenir descendu -->
+                <div class="flex justify-center mt-10">
+                  <a
+                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&currency_code=EUR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition"
+                  >
+                    {{ $t('soutien.support') }}
+                  </a>
+                </div>
             </div>
 
             <!-- donCantineTulear -->
@@ -527,6 +549,17 @@
             >
               <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.cantineTitre') }}</h2>
               <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.cantineDescription')"></p>
+              <!-- Bouton Soutenir descendu -->
+                <div class="flex justify-center mt-10">
+                  <a
+                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&currency_code=EUR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition"
+                  >
+                    {{ $t('soutien.support') }}
+                  </a>
+                </div>
             </div>
 
             <!-- donPrisonniers -->
@@ -560,42 +593,64 @@
               </h2>
               <!-- Texte -->
               <p class="font-normal" v-html="$t('soutien.prisonniersDescription')"></p>
+              <!-- Bouton Soutenir DESCENDU -->
+                <div class="flex justify-center mt-10">
+                  <a
+                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+les+prisonniers&currency_code=EUR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition"
+                  >
+                    {{ $t('soutien.support') }}
+                  </a>
+                </div>
             </div>
-          <!--Dons Anthonio-->
-          <!-- <div
-              ref="donsAntonio"
+          <!--Acquisition de terrains-->
+          <div
+              ref="donsAcquisitionTerrains"
               class="opacity-0 transform translate-y-10 transition-all duration-700 relative flex flex-col items-center lg:justify-self-start lg:col-start-1 lg:row-start-5"
             > 
               <a
-                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+soin+Antonio&amount=0&currency_code=EUR"
+                href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+parrainage+projets+acquisitions+de+terrains&amount=0&currency_code=EUR"
                 class="rounded-full overflow-hidden w-48 h-48 md:w-80 md:h-80 relative bg-gray-200 group" target="_blank" rel="noopener noreferrer"
               >
                 <img
-                  src="/src/assets/photos/antonio.jpeg"
+                  src="/src/assets/photos/terre-rouge-betafo.jpg"
                   :alt="$t('soutien.antonioImageAlt')"
                   class="w-full h-full object-cover"
-                /> -->
+                />
                 <!-- Text overlay on hover -->
-                <!-- <div
+                <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               >
                 <span class="text-white text-lg font-semibold">{{ $t("soutien.support") }}</span>
-              </div> -->
-                <!-- <div
+              </div>
+                <div
                   class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 animate-pulse"
                 >
                   <span class="text-white text-lg font-semibold">{{ $t('soutien.support') }}</span>
                 </div>
               </a>
-            </div> -->
+            </div>
 
-            <!-- <div
-              ref="txtAntonio"
+            <div
+              ref="txtAcquisitionTerrains"
               class="text-justify mt-4 text-md lg:text-lg font-semibold opacity-0 transform translate-y-10 transition-all delay-500 duration-700 self-center lg:col-start-2 lg:row-start-5"
               >
-              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.antonio') }}</h2>
-              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.antonioDescription')"></p>
-            </div>-->
+              <h2 class="font-bold text-lg text-center mb-4">{{ $t('soutien.parrainageAcquisition') }}</h2>
+              <p class="font-normal mb-16 lg:mb-0" v-html="$t('soutien.parrainageAcquisitionDescription')"></p>
+              <!-- BOUTON SOUTENIR DESCENDU -->
+                <div class="flex justify-center mt-10">
+                  <a 
+                    href="https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+acquisition+terrains&currency_code=EUR"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition"
+                  >
+                    {{ $t('soutien.support') }}
+                  </a>
+                </div>
+            </div>
           </div> 
 
           <div class="flex mt-8 items-center justify-start flex-wrap">
@@ -854,8 +909,8 @@ const soutien = ref(null)
 const donSiegeMpy = ref(null)
 const donCentreHospitalier = ref(null)
 const donCantineTulear = ref(null)
-const donsAntonio = ref(null)
-const txtAntonio = ref(null)
+const donsAcquisitionTerrains = ref(null)
+const txtAcquisitionTerrains = ref(null)
 const donPrisonniers = ref(null)
 const txtSiegeMpy = ref(null)
 const txtCentreHospitalier = ref(null)
@@ -918,8 +973,8 @@ onMounted(() => {
     txtCentreHospitalier,
     donCantineTulear,
     txtCantineTulear,
-    donsAntonio,
-    txtAntonio,
+    donsAcquisitionTerrains,
+    txtAcquisitionTerrains,
     donPrisonniers,
     txtPrisonniers,
     footer
