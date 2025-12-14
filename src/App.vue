@@ -1,12 +1,9 @@
 <template>
-  <div class="h-full w-full lang-[locale]">
+  <div :class="['h-full w-full', `lang-${locale}`]">
     <header
       :class="[
         'xl:grid grid-cols-4 xl:grid-cols-8 items-center gap-4 sticky top-0 z-10 h-32 flex',
-        locale === 'fr'
-          ? 'bg-gradient-to-r from-orange-950 to-foni-bg2'
-          : //: 'bg-gradient-to-r from-[#00251E] to-[#007A4D] brightness-110 bg-opacity-90'
-            'bg-gradient-to-r from-green-950 to-green-600 brightness-110 bg-opacity-90'
+        headerGradientClass
       ]"
     >
       <!-- Logo -->
@@ -48,70 +45,13 @@
         class="hidden xl:flex xl:justify-center xl:items-center xl:gap-8 col-span-5"
       >
         <a
-          @click="scrollToSection('qui')"
+          v-for="link in navLinks"
+          :key="link.id"
+          @click="scrollToSection(link.id)"
           class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert (ici, rouge tomate)
-              : 'hover:text-foni-green'
-          "
+          :class="hoverColorClass"
         >
-          {{ $t('whoAreWe') }}
-        </a>
-        <a
-          @click="scrollToSection('objectifs')"
-          class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert
-              : 'hover:text-foni-green'
-          "
-        >
-          {{ $t('objectives') }}
-        </a>
-        <a
-          @click="scrollToSection('actions')"
-          class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert
-              : 'hover:text-foni-green'
-          "
-        >
-          {{ $t('actions') }}
-        </a>
-        <a
-          @click="scrollToSection('fsoutien')"
-          class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert
-              : 'hover:text-foni-green'
-          "
-        >
-          {{ $t('supportForms') }}
-        </a>
-        <a
-          @click="scrollToSection('soutien')"
-          class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert
-              : 'hover:text-foni-green'
-          "
-        >
-          {{ $t('support') }}
-        </a>
-        <a
-          @click="scrollToSection('contact')"
-          class="text-lg text-foni-white font-bold cursor-pointer self-center"
-          :class="
-            locale === 'mg'
-              ? 'hover:text-[#FF6347]' // Couleur complémentaire au vert
-              : 'hover:text-foni-green'
-          "
-        >
-          {{ $t('contactUs') }}
+          {{ $t(link.label) }}
         </a>
       </div>
 
@@ -132,31 +72,20 @@
       >
         <li
           class="my-6"
-          v-for="(key, section) in {
-            qui: 'whoAreWe',
-            objectifs: 'objectives',
-            actions: 'actions',
-            fsoutien: 'supportForms',
-            soutien: 'support',
-            contact: 'contactUs'
-          }"
-          :key="section"
+          v-for="link in navLinks"
+          :key="link.id"
         >
           <a
-            @click="scrollToSection(section)"
+            @click="scrollToSection(link.id)"
             class="text-xl text-foni-white font-bold hover:text-foni-green cursor-pointer"
           >
-            {{ $t(key) }}
+            {{ $t(link.label) }}
           </a>
         </li>
       </ul>
     </header>
     <main
-    :class="[
-      locale === 'fr'
-        ? 'bg-gradient-to-b from-orange-50 to-orange-100'
-        : 'bg-gradient-to-br from-green-100 to-green-50'
-    ]"
+    :class="mainGradientClass"
     >
       <!-- <Timeline /> -->
       <!-- <Slider /> -->
@@ -167,47 +96,72 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Timeline from '/src/views/Timeline.vue';
-import Slider from './views/Slider.vue';
-import SliderVideos from './views/SliderVideos.vue';
+import SliderVideos from './views/SliderVideos.vue'
 
+// Menu et langue
 const open = ref(false)
 const { locale } = useI18n()
 
+// Liens du menu principal (ajouter/retirer ici pour mettre à jour le header)
+const navLinks = [
+  { id: 'qui', label: 'whoAreWe' },
+  { id: 'objectifs', label: 'objectives' },
+  { id: 'actions', label: 'actions' },
+  { id: 'fsoutien', label: 'supportForms' },
+  { id: 'soutien', label: 'support' },
+  { id: 'contact', label: 'contactUs' }
+]
+
+// Classes dynamiques selon la langue
+const headerGradientClass = computed(() =>
+  locale.value === 'fr'
+    ? 'bg-gradient-to-r from-orange-950 to-foni-bg2'
+    : 'bg-gradient-to-r from-green-950 to-green-600 brightness-110 bg-opacity-90'
+)
+const mainGradientClass = computed(() =>
+  locale.value === 'fr'
+    ? 'bg-gradient-to-b from-orange-50 to-orange-100'
+    : 'bg-gradient-to-br from-green-100 to-green-50'
+)
+const hoverColorClass = computed(() =>
+  locale.value === 'mg' ? 'hover:text-[#FF6347]' : 'hover:text-foni-green'
+)
+
 onMounted(() => {
-  // Vérifie si c'est Firefox et ajoute une classe au body
-  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+  // Détecter Firefox pour appliquer une classe spécifique
+  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox')
   if (isFirefox) {
     document.body.classList.add('firefox')
   }
 
-  // Récupère la langue sauvegardée ou utilise 'fr' par défaut
+  // Initialiser la langue depuis le stockage local
   const savedLang = localStorage.getItem('language') || 'fr'
   locale.value = savedLang
   document.documentElement.className = savedLang
 })
 
+// Ouvre/ferme le menu burger
 function toggleMenu() {
   open.value = !open.value
 }
 
+// Scroll fluide vers une section et ferme le menu mobile
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId)
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' })
   }
-  if (sectionId !== 'top-home') {
-    toggleMenu()
-  } else if (sectionId === 'top-home' && open.value) {
-    toggleMenu()
+  if (sectionId !== 'top-home' || open.value) {
+    open.value = false
   }
 }
 
+// Change la langue et enregistre le choix
 const changeLanguage = (lang) => {
   locale.value = lang
-  document.documentElement.className = lang // Change la classe HTML pour adapter le CSS
-  localStorage.setItem('language', lang) // Sauvegarde la langue choisie
+  document.documentElement.className = lang
+  localStorage.setItem('language', lang)
 }
 </script>

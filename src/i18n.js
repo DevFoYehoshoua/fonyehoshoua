@@ -37,25 +37,48 @@ const messages = {
       title: 'Pour soutenir',
       specificWork: 'Soutenir une œuvre spécifique',
       support: 'Soutenir',
-      siegeMpyTitle: 'SIÈGE MPY',
-      siegeMpyDescription:
-        "<b>Location des locaux</b> du siège de l'association “Madagascar pour Yéhoshoua” (MPY) à Antananarivo. <br />Ces locaux sont utilisés <b>pour toutes activités de MPY</b>( épicerie solidaire, salle de formation, bureaux, accueillir des missionnaires...).<br /> Nous nous sommes engagés ensemble pour faire avancer les oeuvres du Père.",
-      siegeMpyDescription6:
-        "Nombreux sont ceux qui décèdent à Madagascar faute de moyen pour se soigner. Le prix des médicaments et des soins médicaux sont trop chers par rapport au salaire moyen et niveau de vie de beaucoup de Malagasy.\n\nEn 2023, le Seigneur Yéhoshoua a fait grâce. L'association Pain Quotidien en partenariat avec MPY a commencé la construction du Centre Hospitalier Pain Quotidien à Antananarivo Madagascar pour donner la possibilité aux Malagasy de se soigner gratuitement.\n\nNous soutenons cette œuvre.",
-      hopitalTitre: 'CENTRE HOSPITALIER PAIN QUOTIDIEN',
-      hopitalDescription:
-        "<b>Nombreux sont ceux qui décèdent</b> à Madagascar faute de moyen pour se soigner. <b>Le prix des médicaments et des soins médicaux sont trop chers</b> par rapport au salaire moyen et niveau de vie de beaucoup de Malagasy. <br /><br />En 2023, le Seigneur Yéhoshoua a fait grâce. L' association Pain Quotidien en partenariat avec MPY a commencé la construction du Centre Hospitalier Pain Quotidien à Antananarivo Madagascar pour <b>donner la possibilité aux Malagasy de se soigner gratuitement.</b> <br />Nous soutenons cette oeuvre.",
-      hopitalSoutenir: 'Soutenir',
-      cantineTitre: 'CANTINE À TULEAR',
-      cantineDescription:
-        "Depuis de nombreuses années, <b>la famine</b> (« le kéré » en malagasy) <b>frappe le sud ouest de Madagascar</b>, de Tuléar à Fort-Dauphin, Amboasary, Ambovobe et d'autres districts. Elle est due à un manque de pluie. <br /><br />En 2021, une grave sécheresse a provoqué une crise alimentaire majeure. Environ 90% des habitants vivent de l'agriculture et de l'élevage. En conséquence, <b>plus d'un million de Malagasy souffrent de la faim.</b> Des milliers d'enfants souffrent de malnutrition sévère. Les populations font cuire des racines, s'en remettent aux mangues ou aux cactus pour se nourrir. <br /><br />En résumé, <b>la population manque de tout</b> (aliments, soins, vêtements...) C'est la raison pour laquelle nous voulons aider et <b>témoigner de l'amour du Seigneur par des actes concrets.</b> <br />Une cantine a été mise en place à Antalanabo pour distribuer de la nourriture aux enfants.",
-      cantineSoutenir: 'Soutenir',
-      prisonniersTitre: 'SOUTIEN AUX PRISONNIERS',
-      prisonniersDescription:
-        "Les détenus de l'île, souffrant le plus souvent de <b>malnutrition</b>, vivent <b>oubliés de tous</b>, dans des conditions <b>d'exiguïté, de surpopulation et de manque d'hygiène.</b><br /><br /><b>Des denrées alimentaires contre la malnutrition :</b> Bien que quelques prisonniers peuvent se permettre d'acheter de la nourriture et de cuisiner dans leur cellule, la plupart d'entre eux font la queue, chaque après-midi, pour recevoir un repas (le seul de la journée) qui se résume à des racines de manioc bouillies.<br />Nous organisons des visites de la prison d'Antananarivo afin de partager la parole du Seigneur, subvenir aux besoins et proposer des formations pour une future insertion professionnelle.",
-      prisonniersSoutenir: 'Soutenir',
-      parrainageAcquisition: 'SOUTIEN PARRAINAGE PROJETS ACQUISITION DE TERRAINS',
-      parrainageAcquisitionDescription: "<b>Élargis l'espace de ta tente, et qu'on étende les couvertures de ton tabernacle : ne retiens rien ! Allonge tes cordages et affermis tes pieux ! Car tu te répandras à droite et à gauche, ta postérité possédera les nations et habitera les villes désertes.<br /> Yesha'yah (Ésaïe) 54:2 </b> <br /> <br /> Fon’i Yehoshoua est une association caritative chrétienne de loi 1901 créée en 2024 en France. Son objectif principal est de <b> mener des actions concrètes </b>, et ainsi <b>pallier certaines carences d'un monde en détresse</b>. <br /><br /> À ce titre, elle intervient dans le domaine socio-humanitaires <b> en luttant contre les injustices sociales, la pauvreté dans le monde principalement à Madagascar</b>. <br />Madagascar est classée dans la catégorie des pays à faible revenu. La pauvreté reste élevée avec <b> plus de 80% de la population vivant en dessous du seuil de l'extrême pauvreté avec moins de 2,15 $ par jour</b>. Sa population est majoritairement jeunes. <b>Au vu de cette constatation</b> et <b>en tant qu'enfant du Seigneur Yéhoshoua,  la lumière du monde et le sel de la terre</b>. Nous ne pouvons pas rester insensible à la souffrances de nos prochains. <br /><br />C'est la raison pour laquelle nous avons décidés de <b>mettre en place plusieurs projets sociaux notamment à Madagascar</b>, dont l'une de ce projet est  :<br /> <b>l'achat des terrains</b> en vue de <b>construire différentes structures</b> telles que des <b>orphelinats</b>, des <b>ecoles</b>, des <b>centres médicaux</b>, des <b>maisons d'accueil</b>, des <b>logements</b>. <br />Par le bais de ces différents projets, <b>les enfants</b> pourront être <b>scolarisés gratuitement</b>, <b>les missionnaires</b> pourront être <b>logés</b>, <b>les jeunes</b> ou <b>la population</b> pourront être <b>formés gratuitement</b> afin d'<b>avoir un métier</b>, <b>aidés</b> et enfin <b>soignés gratuitement</b>. <br /><br />Vos soutiens que ce soit dans la prière ou autres serviront à <b>relever une personne de la détresse</b>, à <b>retrouver sa dignité et sauver sa vie</b>."
+      projects: [
+        {
+          id: 'siege-mpy',
+          title: 'SIÈGE MPY',
+          description:
+            "<b>Location des locaux</b> du siège de l'association “Madagascar pour Yéhoshoua” (MPY) à Antananarivo. <br />Ces locaux sont utilisés <b>pour toutes activités de MPY</b>( épicerie solidaire, salle de formation, bureaux, accueillir des missionnaires...).<br /> Nous nous sommes engagés ensemble pour faire avancer les oeuvres du Père.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR'
+        },
+        {
+          id: 'centre-hospitalier',
+          title: 'CENTRE HOSPITALIER PAIN QUOTIDIEN',
+          description:
+            "<b>Nombreux sont ceux qui décèdent</b> à Madagascar faute de moyen pour se soigner. <b>Le prix des médicaments et des soins médicaux sont trop chers</b> par rapport au salaire moyen et niveau de vie de beaucoup de Malagasy. <br /><br />En 2023, le Seigneur Yéhoshoua a fait grâce. L' association Pain Quotidien en partenariat avec MPY a commencé la construction du Centre Hospitalier Pain Quotidien à Antananarivo Madagascar pour <b>donner la possibilité aux Malagasy de se soigner gratuitement.</b> <br />Nous soutenons cette oeuvre.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR'
+        },
+        {
+          id: 'cantine-tulear',
+          title: 'CANTINE À TULEAR',
+          description:
+            "Depuis de nombreuses années, <b>la famine</b> (« le kéré » en malagasy) <b>frappe le sud ouest de Madagascar</b>, de Tuléar à Fort-Dauphin, Amboasary, Ambovobe et d'autres districts. Elle est due à un manque de pluie. <br /><br />En 2021, une grave sécheresse a provoqué une crise alimentaire majeure. Environ 90% des habitants vivent de l'agriculture et de l'élevage. En conséquence, <b>plus d'un million de Malagasy souffrent de la faim.</b> Des milliers d'enfants souffrent de malnutrition sévère. Les populations font cuire des racines, s'en remettent aux mangues ou aux cactus pour se nourrir. <br /><br />En résumé, <b>la population manque de tout</b> (aliments, soins, vêtements...) C'est la raison pour laquelle nous voulons aider et <b>témoigner de l'amour du Seigneur par des actes concrets.</b> <br />Une cantine a été mise en place à Antalanabo pour distribuer de la nourriture aux enfants.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&currency_code=EUR'
+        },
+        {
+          id: 'prisonniers',
+          title: 'SOUTIEN AUX PRISONNIERS',
+          description:
+            "Les détenus de l'île, souffrant le plus souvent de <b>malnutrition</b>, vivent <b>oubliés de tous</b>, dans des conditions <b>d'exiguïté, de surpopulation et de manque d'hygiène.</b><br /><br /><b>Des denrées alimentaires contre la malnutrition :</b> Bien que quelques prisonniers peuvent se permettre d'acheter de la nourriture et de cuisiner dans leur cellule, la plupart d'entre eux font la queue, chaque après-midi, pour recevoir un repas (le seul de la journée) qui se résume à des racines de manioc bouillies.<br />Nous organisons des visites de la prison d'Antananarivo afin de partager la parole du Seigneur, subvenir aux besoins et proposer des formations pour une future insertion professionnelle.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+les+prisonniers&currency_code=EUR'
+        },
+        {
+          id: 'terrains',
+          title: 'SOUTIEN PARRAINAGE PROJETS ACQUISITION DE TERRAINS',
+          description:
+            "<b>Élargis l'espace de ta tente, et qu'on étende les couvertures de ton tabernacle : ne retiens rien ! Allonge tes cordages et affermis tes pieux ! Car tu te répandras à droite et à gauche, ta postérité possédera les nations et habitera les villes désertes.<br /> Yesha'yah (Ésaïe) 54:2 </b> <br /> <br /> Fon’i Yehoshoua est une association caritative chrétienne de loi 1901 créée en 2024 en France. Son objectif principal est de <b> mener des actions concrètes </b>, et ainsi <b>pallier certaines carences d'un monde en détresse</b>. <br /><br /> À ce titre, elle intervient dans le domaine socio-humanitaires <b> en luttant contre les injustices sociales, la pauvreté dans le monde principalement à Madagascar</b>. <br />Madagascar est classée dans la catégorie des pays à faible revenu. La pauvreté reste élevée avec <b> plus de 80% de la population vivant en dessous du seuil de l'extrême pauvreté avec moins de 2,15 $ par jour</b>. Sa population est majoritairement jeunes. <b>Au vu de cette constatation</b> et <b>en tant qu'enfant du Seigneur Yéhoshoua,  la lumière du monde et le sel de la terre</b>. Nous ne pouvons pas rester insensible à la souffrances de nos prochains. <br /><br />C'est la raison pour laquelle nous avons décidés de <b>mettre en place plusieurs projets sociaux notamment à Madagascar</b>, dont l'une de ce projet est  :<br /> <b>l'achat des terrains</b> en vue de <b>construire différentes structures</b> telles que des <b>orphelinats</b>, des <b>ecoles</b>, des <b>centres médicaux</b>, des <b>maisons d'accueil</b>, des <b>logements</b>. <br />Par le bais de ces différents projets, <b>les enfants</b> pourront être <b>scolarisés gratuitement</b>, <b>les missionnaires</b> pourront être <b>logés</b>, <b>les jeunes</b> ou <b>la population</b> pourront être <b>formés gratuitement</b> afin d'<b>avoir un métier</b>, <b>aidés</b> et enfin <b>soignés gratuitement</b>. <br /><br />Vos soutiens que ce soit dans la prière ou autres serviront à <b>relever une personne de la détresse</b>, à <b>retrouver sa dignité et sauver sa vie</b>.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+acquisition+terrains&currency_code=EUR'
+        }
+      ]
     },
     whoAreWe: 'Qui sommes-nous ?',
     objectives: 'Nos objectifs',
@@ -133,26 +156,48 @@ const messages = {
       title: 'Ho fanohanana',
       specificWork: 'Fanohanana ny asa manokana',
       support: 'Manohana',
-      siegeMpyTitle: 'FOIBE MPY',
-      siegeMpyDescription:
-        "<b>Fanofana trano</b> ho an'ny foiben'ny fikambanana “Madagascar pour Yéhoshoua” (MPY) eto Antananarivo. <br/>Ireo toerana ireo dia ampiasaina amin'ny <b>fanatanterahana ireo hetsiky ny MPY rehetra </b>(toy ny tsena fanampiana ireo sahirana, efi-trano fampianarana (fanjairana, …), birao, fandraisana ireo mpanao iraka, …). <br/>Miara-mientana izahay hampandroso ny asan'ny Ray.",
-      siegeMpyDescriptions:
-        "Maro ireo maty any Madagasikara noho ny tsy fahampian'ny fahaizana manasitrana. Lafo loatra ny vidin'ny fanafody sy ny fitsaboana raha oharina amin'ny karama sy ny fari-piainan'ny Malagasy maro.\n\nTamin'ny taona 2023, nanao fahasoavana i Tompo Yéhoshoua. Nanomboka nanorina ny Centre Hospitalier Pain Quotidien tany Antananarivo Madagasikara ny fikambanana Pain Quotidien niaraka tamin'ny MPY mba hanome fahafahana ireo Malagasy hotsaboina maimaim-poana.\n\nManohana ity asa ity izahay.",
-      hopitalTitre: 'CH PAIN QUOTIDIEN',
-      hopitalDescription:
-        "<b>Betsaka ny olona maty</b> eto Madagasikara noho ny tsy fahampian'ny enti-manana ahafahana mitsabo tena. <b>Lafo dia lafo ny vidin'ny fanafody sy ny fitsaboana</b> raha oharina amin'ny karama antonony sy ny fari-piainan'ny Malagasy maro. <br /><br /> Tamin'ny taona 2023 dia namindra fo Ny Tompo Yehôshoa. Nanomboka nanangana ny Ivon-toera-mpitsaboana ny fikambanana Pain Quotidien sy ny MPY mpiara miombona antoka aminy, <b>mba hanomezana fitsaboana maimaimpoina ny Malagasy.</b><br />Manohana izany asa izany izahay.",
-      hopitalSoutenir: 'Manohana',
-      cantineTitre: 'FANOMEZANA SAKAFO AN-TSEKOLY ANY TOLIARA',
-      cantineDescription:
-        "Efa an-taonany maro no nianjadian'ny <b>mosary / kéré ny any atsimo andrefan'i Madagasikara</b>, manomboka any Toliary ka hatrany Taolagnaro, miampaka hatrany Amboasary, Ambovobe ary ny distrika hafa. Izany dia noho ny tsy fahampian'ny orana. <br/><br/>Tamin'ny taona 2021, nisy haintany mahery vaika tany an-toerana, izay niteraka krizy ara-tsakafo lehibe. Manodidina ny 90% ny mponina any anefa no miaina amin'ny fambolena sy fiompiana. Vokany, <b>maherin'ny iray tapitrisa ny Malagasy no mijaly noho ny hanoanana.</b> Ankizy an'arivony no hiaran'ny tsy fanjarin-tsakafo. Hany sisa azo ataon'ny olona dia mahandro fakan-java-maniry, mihinanana raketa, na manga. <br/><br/>Raha fintinina dia <b>miaina tanteraka amin'ny ny tsy fahampiana ny mponina</b> (sakafo, fitsaboana, fitafiana, sns.) Izany no nandrisika anay hanampy sy haneho ny <b>fitiavan'Ny Tompo amin'ny alalan'ny asa azo tsapain-tànana.</b> <br />Natomboka any Antalanabo ny fanohanana ara-tsakafo ho an'ny ankizy mpianatra.",
-      cantineSoutenir: 'Manohana',
-      prisonniersTitre: 'FANAMPIANA NY VOAFONJA:',
-      prisonniersDescription:
-        "Matetika ireo voafonja eto Madagasikara dia hiaran'ny <b>tsy fanjari-tsakafo</b> sy ny <b>fanadinoin'ny maro.</b> Miaina ao anatin'ny <b>fahaterena sy ny  fihoaran'ny isan'ny ireo voafonja ary ny loto izy ireo.</b> <br/><br/><b>Fanampiana ara-tsakafo hiadiana amin'ny tsy fanjarian-tsakafo : </b>Na dia misy aza ireo voafonja, no afaka mividy sy mahandro sakafo ao amin'ny efitranony, dia maro amin'izy ireo no milahatra sakafo isaky ny tolakandro (hany sakafo tokana mandritry ny tontolo andro), izay tsy inona fa mangahazo tetika. Mikarakara fitsidihana ny fonjan'Antananarivo izahay, mba hizarana ny Tenin'Ny Tompo, sy hanampiana azy ireo, ary koa hanolorana fiofanana arak'asa ho fanomanana ny hoavin'izy ireo aorian'ny fivoahana ny fonja.",
-      prisonniersSoutenir: 'Manohana',
-      parrainageAcquisition: 'FANAMPIANA FIVIDIANANA TANY',
-      parrainageAcquisitionDescription: "<b>Halalaho ny tranolainao, ary aoka hohenjanina ireo lamban'ny tranolainao lehibe. Aza mihafihafy mihitsy rehefa manao izany. Halavao ny tady manenjana ny lainao, ary hamafiso ireo fantsika be fanenjanan-day. Fa hiely hiankavanana sy hiankavia ianao, ary ho lasa fananan'ny taranakao ireo firenena. Honenan'izy ireo koa ny tanàna aolo. Yesha'yah (Isaia) 54:2-3</b><br/><br/> Fon'i Yehôshoa dia fikambanana kristianina mpanao asa soa, miankina amin'ny lalàna 1901, naorina ny taona 2024 eto Frantsa. Ny tanjony lehibe dia <b>ny manatanteraka asa mivaingana</b>, mba <b>hanampiana amin'ny famahana ny olana sy ny tsy fahampiana maro miseho amin'ity tontolo anaty fahoriana ity</b>. <br /> Amin'izany, <b> dia miasa eo amin'ny sehatra sosialy sy maha-olona ny fikambanana</b>, amin'ny <b>ady atao amin'ny tsy rariny ara-tsosialy sy ny fahantrana maneran-tany</b>, indrindra eto Madagasikara. <br /> <br />Madagasikara dia isan'ny <b>firenena ambany fidiram-bola</b>; mijanona ho <b>avo ny fahantrana</b> satria mahery ny 80%-n'ny mponina no <b>miaina ambanin'ny fari-piainan'ny fahantrana tanteraka</b>, miaina amin'ny vola latsaky ny 2,15 dolara isan'andro. <b>Ny ankamaroan'ny mponina dia tanora</b>. Manoloana izany zava-misy izany, ary <b>amin'ny maha-zanaky ny Tompo Yehôshoa</b>, <b>ilay fahazavan'izao tontolo izao sy fanasin'ny  tany</b>, dia tsy afaka mijery fotsiny isika ka mangina manoloana ny fijalian'ny hafa. <br /><br />Noho izany indrindra no <b>nanapahanay hevitra hanangana tetikasa sosialy maro, indrindra eto Madagasikara</b>. Anisan'izany ny iray amin'ireo tetikasa lehibe, dia <b>ny fividianana tany hanorenana fotodrafitrasa samihafa </b>: <b>trano fitaizana zaza kamboty</b>, <b>sekoly</b>, <b>tobim-pahasalamana</b>, <b>trano fandraisam-bahiny</b>, ary <b>trano fonenana</b>. <br /><br />Amin'ny alalan'ireo tetikasa ireo dia afaka ny : <br /><b>Hahazo fianarana maimaim-poana ny ankizy</b>, <b>hisy trano hivantanana ireo misionera manatanteraka ny iraky ny Tompo</b> avy amin'ny toerana  maro samihfa, <b>hahazo fampiofanana maimaim-poana ireo tanora</b> na ny <b>mponina mba hahazo asa</b>, <b>fanampiana  ara-tsosialy ary hahazo fitsaboana maimaim-poana</b> ihany koa <b>ireo marefo</b>. <br /><br />Ny fanohanana rehetra ataonao na <b>vavaka</b> izany na <b>amin'ny fomba hafa dia hanampy hanarina olona iray avy ao anaty fahoriana</b>, <b>hamerenana ny hajany</b>, ary <b>mety hamonjy ny ainy mihitsy</b>."
-    
+      projects: [
+        {
+          id: 'siege-mpy',
+          title: 'FOIBE MPY',
+          description:
+            "<b>Fanofana trano</b> ho an'ny foiben'ny fikambanana “Madagascar pour Yéhoshoua” (MPY) eto Antananarivo. <br/>Ireo toerana ireo dia ampiasaina amin'ny <b>fanatanterahana ireo hetsiky ny MPY rehetra </b>(toy ny tsena fanampiana ireo sahirana, efi-trano fampianarana (fanjairana, …), birao, fandraisana ireo mpanao iraka, …). <br/>Miara-mientana izahay hampandroso ny asan'ny Ray.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+siege+de+mpy&amount=0&currency_code=EUR'
+        },
+        {
+          id: 'centre-hospitalier',
+          title: 'CH PAIN QUOTIDIEN',
+          description:
+            "<b>Betsaka ny olona maty</b> eto Madagasikara noho ny tsy fahampian'ny enti-manana ahafahana mitsabo tena. <b>Lafo dia lafo ny vidin'ny fanafody sy ny fitsaboana</b> raha oharina amin'ny karama antonony sy ny fari-piainan'ny Malagasy maro. <br /><br /> Tamin'ny taona 2023 dia namindra fo Ny Tompo Yehôshoa. Nanomboka nanangana ny Ivon-toera-mpitsaboana ny fikambanana Pain Quotidien sy ny MPY mpiara miombona antoka aminy, <b>mba hanomezana fitsaboana maimaimpoina ny Malagasy.</b><br />Manohana izany asa izany izahay.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+le+Centre+Hospitalier&amount=0&currency_code=EUR'
+        },
+        {
+          id: 'cantine-tulear',
+          title: 'FANOMEZANA SAKAFO AN-TSEKOLY ANY TOLIARA',
+          description:
+            "Efa an-taonany maro no nianjadian'ny <b>mosary / kéré ny any atsimo andrefan'i Madagasikara</b>, manomboka any Toliary ka hatrany Taolagnaro, miampaka hatrany Amboasary, Ambovobe ary ny distrika hafa. Izany dia noho ny tsy fahampian'ny orana. <br/><br/>Tamin'ny taona 2021, nisy haintany mahery vaika tany an-toerana, izay niteraka krizy ara-tsakafo lehibe. Manodidina ny 90% ny mponina any anefa no miaina amin'ny fambolena sy fiompiana. Vokany, <b>maherin'ny iray tapitrisa ny Malagasy no mijaly noho ny hanoanana.</b> Ankizy an'arivony no hiaran'ny tsy fanjarin-tsakafo. Hany sisa azo ataon'ny olona dia mahandro fakan-java-maniry, mihinanana raketa, na manga. <br/><br/>Raha fintinina dia <b>miaina tanteraka amin'ny ny tsy fahampiana ny mponina</b> (sakafo, fitsaboana, fitafiana, sns.) Izany no nandrisika anay hanampy sy haneho ny <b>fitiavan'Ny Tompo amin'ny alalan'ny asa azo tsapain-tànana.</b> <br />Natomboka any Antalanabo ny fanohanana ara-tsakafo ho an'ny ankizy mpianatra.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+la+Cantine+de+Tulear&currency_code=EUR'
+        },
+        {
+          id: 'prisonniers',
+          title: 'FANAMPIANA NY VOAFONJA:',
+          description:
+            "Matetika ireo voafonja eto Madagasikara dia hiaran'ny <b>tsy fanjari-tsakafo</b> sy ny <b>fanadinoin'ny maro.</b> Miaina ao anatin'ny <b>fahaterena sy ny  fihoaran'ny isan'ny ireo voafonja ary ny loto izy ireo.</b> <br/><br/><b>Fanampiana ara-tsakafo hiadiana amin'ny tsy fanjarian-tsakafo : </b>Na dia misy aza ireo voafonja, no afaka mividy sy mahandro sakafo ao amin'ny efitranony, dia maro amin'izy ireo no milahatra sakafo isaky ny tolakandro (hany sakafo tokana mandritry ny tontolo andro), izay tsy inona fa mangahazo tetika. Mikarakara fitsidihana ny fonjan'Antananarivo izahay, mba hizarana ny Tenin'Ny Tompo, sy hanampiana azy ireo, ary koa hanolorana fiofanana arak'asa ho fanomanana ny hoavin'izy ireo aorian'ny fivoahana ny fonja.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+pour+les+prisonniers&currency_code=EUR'
+        },
+        {
+          id: 'terrains',
+          title: 'FANAMPIANA FIVIDIANANA TANY',
+          description:
+            "<b>Halalaho ny tranolainao, ary aoka hohenjanina ireo lamban'ny tranolainao lehibe. Aza mihafihafy mihitsy rehefa manao izany. Halavao ny tady manenjana ny lainao, ary hamafiso ireo fantsika be fanenjanan-day. Fa hiely hiankavanana sy hiankavia ianao, ary ho lasa fananan'ny taranakao ireo firenena. Honenan'izy ireo koa ny tanàna aolo. Yesha'yah (Isaia) 54:2-3</b><br/><br/> Fon'i Yehôshoa dia fikambanana kristianina mpanao asa soa, miankina amin'ny lalàna 1901, naorina ny taona 2024 eto Frantsa. Ny tanjony lehibe dia <b>ny manatanteraka asa mivaingana</b>, mba <b>hanampiana amin'ny famahana ny olana sy ny tsy fahampiana maro miseho amin'ity tontolo anaty fahoriana ity</b>. <br /> Amin'izany, <b> dia miasa eo amin'ny sehatra sosialy sy maha-olona ny fikambanana</b>, amin'ny <b>ady atao amin'ny tsy rariny ara-tsosialy sy ny fahantrana maneran-tany</b>, indrindra eto Madagasikara. <br /> <br />Madagasikara dia isan'ny <b>firenena ambany fidiram-bola</b>; mijanona ho <b>avo ny fahantrana</b> satria mahery ny 80%-n'ny mponina no <b>miaina ambanin'ny fari-piainan'ny fahantrana tanteraka</b>, miaina amin'ny vola latsaky ny 2,15 dolara isan'andro. <b>Ny ankamaroan'ny mponina dia tanora</b>. Manoloana izany zava-misy izany, ary <b>amin'ny maha-zanaky ny Tompo Yehôshoa</b>, <b>ilay fahazavan'izao tontolo izao sy fanasin'ny  tany</b>, dia tsy afaka mijery fotsiny isika ka mangina manoloana ny fijalian'ny hafa. <br /><br />Noho izany indrindra no <b>nanapahanay hevitra hanangana tetikasa sosialy maro, indrindra eto Madagasikara</b>. Anisan'izany ny iray amin'ireo tetikasa lehibe, dia <b>ny fividianana tany hanorenana fotodrafitrasa samihafa </b>: <b>trano fitaizana zaza kamboty</b>, <b>sekoly</b>, <b>tobim-pahasalamana</b>, <b>trano fandraisam-bahiny</b>, ary <b>trano fonenana</b>. <br /><br />Amin'ny alalan'ireo tetikasa ireo dia afaka ny : <br /><b>Hahazo fianarana maimaim-poana ny ankizy</b>, <b>hisy trano hivantanana ireo misionera manatanteraka ny iraky ny Tompo</b> avy amin'ny toerana  maro samihfa, <b>hahazo fampiofanana maimaim-poana ireo tanora</b> na ny <b>mponina mba hahazo asa</b>, <b>fanampiana  ara-tsosialy ary hahazo fitsaboana maimaim-poana</b> ihany koa <b>ireo marefo</b>. <br /><br />Ny fanohanana rehetra ataonao na <b>vavaka</b> izany na <b>amin'ny fomba hafa dia hanampy hanarina olona iray avy ao anaty fahoriana</b>, <b>hamerenana ny hajany</b>, ary <b>mety hamonjy ny ainy mihitsy</b>.",
+          link:
+            'https://www.paypal.com/donate?business=fonyehoshoa@gmail.com&cmd=_donations&item_name=Don+acquisition+terrains&currency_code=EUR'
+        }
+      ]
     },
     whoAreWe: 'Iza moa izahay ?',
     objectives: 'Ny tanjonay',
