@@ -749,7 +749,7 @@
         <!-- 📞 Numéro de contact de l'association -->
         <div class="bg-indigo-100 p-4 rounded-lg shadow-md mb-6 text-center">
           <p class="text-gray-700 text-lg font-semibold">📞 {{ $t('contact_association') }} :</p>
-          <p class="text-xl font-bold text-indigo-600">+33 6 33 05 48 92</p>
+          <!--<p class="text-xl font-bold text-indigo-600">+33 6 33 05 48 92</p>-->
           <p class="text-xl font-bold text-indigo-600">fonyehoshoa@gmail.com</p>
         </div>
 
@@ -818,8 +818,8 @@
           Association caritative chrétienne
         </p>
 
-        <div class="flex mt-4 items-center justify-center flex-wrap">
-          <!-- Icône téléphone + numéro -->
+        <!--<div class="flex mt-4 items-center justify-center flex-wrap">
+           Icône téléphone + numéro 
           <svg
             class="max-w-4 xl:max-w-8 mr-2 self-center"
             xmlns="http://www.w3.org/2000/svg"
@@ -833,7 +833,7 @@
           <a class="hover:text-red-400 self-center xl:text-2xl" href="tel:+33633054892">
             +33 6 33 05 48 92
           </a>
-        </div>
+        </div>-->
 
         <!-- Icône e-mail + adresse mail -->
         <div class="flex mt-2 items-center justify-center flex-wrap">
