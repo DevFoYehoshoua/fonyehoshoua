@@ -86,6 +86,8 @@ const messages = {
     donSpontane: '(PayPal) Don spontané',
     compte: 'Compte',
     virementBancaire: 'Virement bancaire',
+    messageBancaire1: "Nous procédons actuellement à un changement d'établissement bancaire.",
+    messageBancaire2: "Nos coordonnées (IBAN/BIC) sont en cours de mise à jour. ✔️ Les dons via PayPal restent disponibles et peuvent être utilisés sans interruption.",
     cheque: 'Chèque',
     ordreAssociation: "à l'ordre de l'association Fon'i Yehoshoa",
     noteMotifDon:
@@ -183,6 +185,8 @@ const messages = {
     donSpontane: '(PayPal) Fanomezana an-tsitrapo',
     compte: 'Kaonty',
     virementBancaire: "Fandefasana vola amin'ny banky",
+    messageBancaire1: "Mampahafantatra anareo izahay fa manao fanovana banky amin'izao fotoana izao.",
+    messageBancaire2: "Noho izany, havaozina tsy ho ela eto ny laharana IBAN sy BIC vaovao anay. ✔️ Ny fandoavam-bola amin'ny alalan'ny PayPal kosa dia mbola azo ampiasaina.",
     cheque: 'Taratasim-bola',
     ordreAssociation: "Ho an'ny fikambanana Fon'i Yehoshoa",
     noteMotifDon:
