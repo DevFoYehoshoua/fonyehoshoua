@@ -186,7 +186,7 @@ const messages = {
     compte: 'Kaonty',
     virementBancaire: "Fandefasana vola amin'ny banky",
     messageBancaire1: "Mampahafantatra anareo izahay fa manao fanovana banky amin'izao fotoana izao.",
-    messageBancaire2: "Noho izany, havaozina tsy ho ela eto ny laharana IBAN sy BIC vaovao anay. ✔️ Ny fandoavam-bola amin'ny alalan'ny PayPal kosa dia mbola azo ampiasaina.",
+    messageBancaire2: "Noho izany, havaozina tsy ho ela eto ny laharana IBAN sy BIC vaovao anay. ✔️ Ny fanomezana amin'ny alalan'ny PayPal kosa dia mbola azo ampiasaina.",
     cheque: 'Taratasim-bola',
     ordreAssociation: "Ho an'ny fikambanana Fon'i Yehoshoa",
     noteMotifDon:
