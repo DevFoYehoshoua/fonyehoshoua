@@ -695,10 +695,8 @@
             </h3>
           </div>
           <div class="mt-2 sm:mt-4 ml-4">
-            <!--<p>BIC : CMCIFR2A</p>
-            <p class="mt-1">IBAN : FR7610278022070002089950106</p>-->
-            <p>{{ $t('messageBancaire1') }}</p>
-            <p class="mt-1">{{ $t('messageBancaire2') }}</p>
+            <p>BIC : CRLYFRPP</p>
+            <p class="mt-1">IBAN : FR78 3000 2040 4700 0007 1636 R80</p>
           </div>
 
           <div class="flex mt-4 items-center justify-start flex-wrap">

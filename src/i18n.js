@@ -89,7 +89,7 @@ const messages = {
     messageBancaire1: "Nous procédons actuellement à un changement d'établissement bancaire.",
     messageBancaire2: "Nos coordonnées (IBAN/BIC) sont en cours de mise à jour. ✔️ Les dons via PayPal restent disponibles et peuvent être utilisés sans interruption.",
     cheque: 'Chèque',
-    ordreAssociation: "à l'ordre de l'association Fon'i Yehoshoa",
+    ordreAssociation: "à l'ordre de l'association FON I YEHOSHOA",
     noteMotifDon:
       "N.B: N'oubliez pas de préciser le motif de votre don (ex : mission, prisonniers...)",
     contactUs: 'Nous contacter',
@@ -188,7 +188,7 @@ const messages = {
     messageBancaire1: "Mampahafantatra anareo izahay fa manao fanovana banky amin'izao fotoana izao.",
     messageBancaire2: "Noho izany, havaozina tsy ho ela eto ny laharana IBAN sy BIC vaovao anay. ✔️ Ny fanomezana amin'ny alalan'ny PayPal kosa dia mbola azo ampiasaina.",
     cheque: 'Taratasim-bola',
-    ordreAssociation: "Ho an'ny fikambanana Fon'i Yehoshoa",
+    ordreAssociation: "Ho an'ny fikambanana FON I YEHOSHOA",
     noteMotifDon:
       "Fanamarihana: Aza adino ny manamarika ny anton'ny tolotra ataonareo (ohatra : iraka, voafonja, foibe MPY,...)",
     contactUs: 'Fifandraisana',
