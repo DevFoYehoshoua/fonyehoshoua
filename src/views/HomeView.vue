@@ -747,7 +747,7 @@
         <!-- 📞 Numéro de contact de l'association -->
         <div class="bg-indigo-100 p-4 rounded-lg shadow-md mb-6 text-center">
           <p class="text-gray-700 text-lg font-semibold">📞 {{ $t('contact_association') }} :</p>
-          <!--<p class="text-xl font-bold text-indigo-600">+33 6 33 05 48 92</p>-->
+          <p class="text-xl font-bold text-indigo-600">+33 6 31 26 60 05</p>
           <p class="text-xl font-bold text-indigo-600">fonyehoshoa@gmail.com</p>
         </div>
 
@@ -816,7 +816,7 @@
           Association caritative chrétienne
         </p>
 
-        <!--<div class="flex mt-4 items-center justify-center flex-wrap">
+        <div class="flex mt-4 items-center justify-center flex-wrap">
            Icône téléphone + numéro 
           <svg
             class="max-w-4 xl:max-w-8 mr-2 self-center"
@@ -828,10 +828,10 @@
               d="M497.39,361.81l-105.6-48a24,24,0,0,0-28.2,6.91l-42.8,51.4a321.6,321.6,0,0,1-143-143l51.4-42.8a24,24,0,0,0,6.91-28.2l-48-105.6A24.08,24.08,0,0,0,167.39,0H72A24,24,0,0,0,48,24C48,280.77,231.23,464,488,464a24,24,0,0,0,24-24V376A24,24,0,0,0,497.39,361.81Z"
             />
           </svg>
-          <a class="hover:text-red-400 self-center xl:text-2xl" href="tel:+33633054892">
-            +33 6 33 05 48 92
+          <a class="hover:text-red-400 self-center xl:text-2xl" href="tel:+33631266005">
+            +33 6 31 26 60 05
           </a>
-        </div>-->
+        </div>
 
         <!-- Icône e-mail + adresse mail -->
         <div class="flex mt-2 items-center justify-center flex-wrap">
